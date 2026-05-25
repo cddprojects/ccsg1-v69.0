@@ -50,7 +50,7 @@
   if (profileForm) {
     profileForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      window.location.href = "thank-you.html";
+      window.location.href = "/thank-you";
     });
   }
 })();

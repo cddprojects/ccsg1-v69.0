@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generates static HTML site in /static-html from shared content modules.
+ * Generates static HTML site at the project root from shared content modules.
  * Run: node --experimental-strip-types scripts/generate-static-html.mjs
  */
 import { cpSync, mkdirSync, writeFileSync } from "fs";
