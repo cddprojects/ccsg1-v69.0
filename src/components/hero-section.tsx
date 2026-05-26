@@ -22,16 +22,16 @@ export function HeroSection() {
     <section className="relative overflow-hidden bg-white pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24">
       <div className="mesh-gradient pointer-events-none absolute inset-0" aria-hidden />
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-5 lg:items-center lg:gap-12">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-5 lg:gap-x-12 lg:gap-y-8">
           <SectionImage
             src={siteImages.hero}
             alt="Person working remotely on a laptop at home"
             priority
-            className="aspect-[16/10] w-full rounded-2xl shadow-lg sm:rounded-3xl lg:col-span-2 lg:aspect-[4/5]"
+            className="aspect-[16/10] w-full rounded-2xl shadow-lg sm:rounded-3xl lg:col-span-2 lg:row-start-1 lg:aspect-auto lg:h-full lg:min-h-[34rem]"
             sizes="(max-width: 1024px) 100vw, 40vw"
           />
 
-          <MotionSection className="lg:col-span-3">
+          <MotionSection className="lg:col-span-3 lg:row-start-1">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
               MATCHING REMOTE - SINGAPORE
             </p>
@@ -65,20 +65,20 @@ export function HeroSection() {
                 See the process
               </Button>
             </div>
-
-            <dl className="mt-8 grid grid-cols-3 gap-3 border-t border-slate-200/80 pt-6">
-              {heroStats.map((stat) => (
-                <div key={stat.label}>
-                  <dt className="font-serif text-xl font-semibold text-brand-700 sm:text-2xl">
-                    {stat.value}
-                  </dt>
-                  <dd className="mt-0.5 text-xs leading-snug text-slate-600 sm:text-sm">
-                    {stat.label}
-                  </dd>
-                </div>
-              ))}
-            </dl>
           </MotionSection>
+
+          <dl className="mt-8 grid grid-cols-3 gap-3 border-t border-slate-200/80 pt-6 lg:col-span-3 lg:col-start-3 lg:row-start-2 lg:mt-0">
+            {heroStats.map((stat) => (
+              <div key={stat.label}>
+                <dt className="font-serif text-xl font-semibold text-brand-700 sm:text-2xl">
+                  {stat.value}
+                </dt>
+                <dd className="mt-0.5 text-xs leading-snug text-slate-600 sm:text-sm">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
 
         <MotionSection delay={0.08} id="hero-form" className="mt-12 lg:mt-14">
