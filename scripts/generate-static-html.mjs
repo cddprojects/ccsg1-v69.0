@@ -156,7 +156,7 @@ function footer(homeLink) {
         </div>
         <div>
           <p class="text-sm font-semibold text-white">Support</p>
-          <p class="mt-3 text-sm text-brand-200">support@matchingremote.com</p>
+          <p class="mt-3 text-sm text-brand-200">support@matching-remote.com</p>
           <p class="mt-3 text-sm leading-relaxed text-slate-400"><span class="block font-medium text-slate-300">Business Correspondence Address</span>Ang Mo Kio Avenue 3, 569933, Ang Mo Kio</p>
         </div>
       </div>
@@ -421,7 +421,7 @@ function buildIndex() {
       <div class="flex flex-col gap-6 rounded-2xl border border-brand-200/40 bg-brand-50/50 px-5 py-8 sm:rounded-3xl sm:px-10 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
         <div class="max-w-2xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl">Questions before you apply?</h2>
         <p class="mt-4 text-base leading-relaxed text-slate-600">For general questions about how Matching Remote works, contact support for platform-related questions. Hiring decisions remain with third-party companies.</p></div>
-        <p class="shrink-0 text-sm font-medium text-slate-800 lg:text-right">support@matchingremote.com</p>
+        <p class="shrink-0 text-sm font-medium text-slate-800 lg:text-right">support@matching-remote.com</p>
       </div>
     </div>
   </section>
@@ -570,7 +570,7 @@ function buildThankYou() {
         <h2 class="font-serif text-lg font-semibold text-slate-900 sm:text-xl">What may happen next</h2>
         <ul class="mt-4 space-y-3">${steps}</ul>
       </div>
-      <p class="mt-8 text-sm leading-relaxed text-slate-600">Questions about your submission? <span class="font-medium text-slate-800">support@matchingremote.com</span></p>
+      <p class="mt-8 text-sm leading-relaxed text-slate-600">Questions about your submission? <span class="font-medium text-slate-800">support@matching-remote.com</span></p>
       <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
         <a href="index.html" class="btn-primary w-full sm:w-auto">Back to Homepage</a>
         <a href="index.html#steps" class="btn-outline w-full sm:w-auto">See the process</a>
