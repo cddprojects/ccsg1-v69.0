@@ -294,7 +294,7 @@ function buildIndex() {
     <div class="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-8 lg:gap-y-10">
         <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
-          <div class="relative aspect-[16/10] w-full shrink-0 overflow-hidden rounded-2xl shadow-lg sm:rounded-3xl lg:aspect-auto lg:h-full lg:min-h-full lg:w-[40%] lg:max-w-md lg:self-stretch">
+          <div class="relative aspect-[16/10] w-full shrink-0 overflow-hidden rounded-2xl shadow-lg sm:rounded-3xl lg:aspect-auto lg:h-full lg:min-h-0 lg:min-h-full lg:w-[40%] lg:max-w-md lg:self-stretch">
             <img src="images/hero.png" alt="Person working remotely on a laptop at home" class="absolute inset-0 h-full w-full object-cover object-[58%_42%]" width="800" height="600" />
           </div>
           <div class="flex min-w-0 flex-1 flex-col">

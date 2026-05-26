@@ -106,10 +106,14 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-  h1,
   h2,
   h3 {
     line-height: 3.5rem;
+  }
+
+  /* Hero h1 wraps on desktop; fixed 3.5rem line-height causes overlapping glyphs in static HTML */
+  section:first-of-type h1 {
+    line-height: 1.2;
   }
 }
 
