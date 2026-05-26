@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "build:static-html": "node --experimental-strip-types scripts/generate-static-html.mjs"
+    "build:static-html": "node --experimental-strip-types scripts/generate-static-html.mjs",
+    "preview:static": "python3 -m http.server 8080"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

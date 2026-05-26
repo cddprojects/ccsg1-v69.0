@@ -101,16 +101,20 @@ h3 {
   line-height: 1.42;
 }
 
+.font-serif {
+  font-family: var(--font-headline), Georgia, "Times New Roman", serif;
+}
+
 @media (min-width: 1024px) {
-  h1,
   h2,
   h3 {
     line-height: 3.5rem;
   }
-}
 
-.font-serif {
-  font-family: var(--font-headline), Georgia, "Times New Roman", serif;
+  /* Hero h1 wraps on desktop; fixed 3.5rem line-height causes overlapping glyphs in static HTML */
+  section:first-of-type h1 {
+    line-height: 1.2;
+  }
 }
 
 .mesh-gradient {

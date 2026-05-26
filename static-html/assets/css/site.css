@@ -123,13 +123,10 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+  h1,
   h2,
   h3 {
     line-height: 3.5rem;
-  }
-
-  section:first-of-type h1 {
-    line-height: 1.2;
   }
 
   #roles-heading {

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generates static HTML site at the project root from shared content modules.
+ * Generates static HTML site in /static-html from shared content modules.
  * Run: node --experimental-strip-types scripts/generate-static-html.mjs
  */
 import { cpSync, mkdirSync, writeFileSync } from "fs";
@@ -156,7 +156,7 @@ function footer(homeLink) {
         </div>
         <div>
           <p class="text-sm font-semibold text-white">Support</p>
-          <p class="mt-3 text-sm text-brand-200">support@matching-remote.com</p>
+          <p class="mt-3 text-sm text-brand-200">support@matchingremote.com</p>
           <p class="mt-3 text-sm leading-relaxed text-slate-400"><span class="block font-medium text-slate-300">Business Correspondence Address</span>Ang Mo Kio Avenue 3, 569933, Ang Mo Kio</p>
         </div>
       </div>
@@ -294,8 +294,8 @@ function buildIndex() {
     <div class="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-8 lg:gap-y-10">
         <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
-          <div class="relative aspect-[16/10] w-full shrink-0 overflow-hidden rounded-2xl shadow-lg sm:rounded-3xl lg:aspect-auto lg:h-full lg:min-h-full lg:w-[40%] lg:max-w-md lg:self-stretch">
-            <img src="images/hero.png" alt="Person working remotely on a laptop at home" class="absolute inset-0 h-full w-full object-cover object-[58%_42%]" width="800" height="600" />
+          <div class="relative aspect-[16/10] w-full shrink-0 overflow-hidden rounded-2xl shadow-lg sm:rounded-3xl lg:w-[40%] lg:max-w-md lg:self-stretch lg:aspect-[4/5]">
+            <img src="images/hero.png" alt="Person working remotely on a laptop at home" class="size-full object-cover object-[58%_42%]" width="800" height="600" loading="eager" />
           </div>
           <div class="flex min-w-0 flex-1 flex-col">
             <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">MATCHING REMOTE - SINGAPORE</p>
@@ -320,23 +320,8 @@ function buildIndex() {
         </div>
       </div>
       <div id="hero-form" class="mt-12 lg:mt-14">
-        <form id="profile-form" class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-lg sm:rounded-3xl">
-          <div class="border-b border-slate-100 bg-slate-50/90 px-5 py-5 sm:px-8">
-            <h2 class="font-serif text-xl font-semibold text-slate-900 sm:text-2xl">Profile readiness</h2>
-            <ul class="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6">${readiness}</ul>
-          </div>
-          <div class="space-y-4 px-5 py-6 sm:px-8 sm:py-8">
-            <div><label class="mb-1.5 block text-sm font-medium text-slate-700">Name</label><input type="text" class="w-full min-h-12 rounded-xl border border-slate-200 px-4 py-3 text-base sm:text-sm" placeholder="Your full name" /></div>
-            <div><label class="mb-1.5 block text-sm font-medium text-slate-700">Email Address</label><input type="email" class="w-full min-h-12 rounded-xl border border-slate-200 px-4 py-3 text-base sm:text-sm" placeholder="you@email.com" /></div>
-            <div><label class="mb-1.5 block text-sm font-medium text-slate-700">WhatsApp Number</label>
-              <div class="flex flex-col gap-2 sm:flex-row"><select class="min-h-12 w-full rounded-xl border border-slate-200 px-4 py-3 sm:w-28 sm:text-sm"><option>+65</option><option>+60</option><option>+62</option><option>+63</option></select>
-              <input type="tel" class="min-h-12 w-full flex-1 rounded-xl border border-slate-200 px-4 py-3 text-base sm:text-sm" placeholder="Phone number" /></div></div>
-            <div><label class="mb-1.5 block text-sm font-medium text-slate-700">Job Position Preferred</label><select class="w-full min-h-12 rounded-xl border border-slate-200 px-4 py-3 text-base sm:text-sm">${jobs}</select></div>
-            <label class="flex items-start gap-3 text-sm leading-relaxed text-slate-600"><input type="checkbox" class="mt-1 h-4 w-4 rounded border-slate-300" />${esc(consentText)}</label>
-            <div class="rounded-xl border border-dashed border-slate-200 bg-slate-50 px-4 py-5 text-center text-xs text-slate-500">reCAPTCHA placeholder</div>
-            <button type="submit" class="btn-primary w-full text-base">Submit</button>
-          </div>
-        </form>
+        <div data-cddform="cc-sg10-singapore10" data-origin="www.matching-remote.com"></div>
+        <script src="https://staging.chatfromforms.com/form-embed.js?v=0.1" defer></script>
       </div>
     </div>
   </section>
@@ -426,7 +411,7 @@ function buildIndex() {
       <div class="flex flex-col gap-6 rounded-2xl border border-brand-200/40 bg-brand-50/50 px-5 py-8 sm:rounded-3xl sm:px-10 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
         <div class="max-w-2xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl">Questions before you apply?</h2>
         <p class="mt-4 text-base leading-relaxed text-slate-600">For general questions about how Matching Remote works, contact support for platform-related questions. Hiring decisions remain with third-party companies.</p></div>
-        <p class="shrink-0 text-sm font-medium text-slate-800 lg:text-right">support@matching-remote.com</p>
+        <p class="shrink-0 text-sm font-medium text-slate-800 lg:text-right">support@matchingremote.com</p>
       </div>
     </div>
   </section>
@@ -575,7 +560,7 @@ function buildThankYou() {
         <h2 class="font-serif text-lg font-semibold text-slate-900 sm:text-xl">What may happen next</h2>
         <ul class="mt-4 space-y-3">${steps}</ul>
       </div>
-      <p class="mt-8 text-sm leading-relaxed text-slate-600">Questions about your submission? <span class="font-medium text-slate-800">support@matching-remote.com</span></p>
+      <p class="mt-8 text-sm leading-relaxed text-slate-600">Questions about your submission? <span class="font-medium text-slate-800">support@matchingremote.com</span></p>
       <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
         <a href="index.html" class="btn-primary w-full sm:w-auto">Back to Homepage</a>
         <a href="index.html#steps" class="btn-outline w-full sm:w-auto">See the process</a>
