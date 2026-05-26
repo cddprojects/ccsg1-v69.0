@@ -6,6 +6,7 @@ type SectionImageProps = {
   priority?: boolean;
   className?: string;
   sizes?: string;
+  objectPosition?: string;
 };
 
 export function SectionImage({
@@ -14,6 +15,7 @@ export function SectionImage({
   priority = false,
   className = "",
   sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 560px",
+  objectPosition = "center",
 }: SectionImageProps) {
   return (
     <div
@@ -26,6 +28,7 @@ export function SectionImage({
         priority={priority}
         sizes={sizes}
         className="object-cover"
+        style={{ objectPosition }}
       />
     </div>
   );
