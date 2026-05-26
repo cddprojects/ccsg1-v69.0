@@ -292,11 +292,12 @@ function buildIndex() {
   <section class="relative overflow-hidden bg-white pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24">
     <div class="mesh-gradient pointer-events-none absolute inset-0" aria-hidden="true"></div>
     <div class="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col gap-8 lg:grid lg:grid-cols-5 lg:items-stretch lg:gap-x-12 lg:gap-y-0">
-        <div class="relative aspect-[16/10] w-full min-h-0 overflow-hidden rounded-2xl shadow-lg sm:rounded-3xl lg:col-span-2 lg:row-start-1 lg:flex lg:aspect-auto lg:h-full">
-          <img src="images/hero.png" alt="Person working remotely on a laptop at home" class="absolute inset-0 h-full w-full object-cover object-[58%_42%]" width="800" height="600" />
-        </div>
-        <div class="flex min-w-0 flex-col lg:col-span-3 lg:row-start-1">
+      <div class="flex flex-col gap-8 lg:gap-y-10">
+        <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
+          <div class="relative aspect-[16/10] w-full shrink-0 overflow-hidden rounded-2xl shadow-lg sm:rounded-3xl lg:aspect-auto lg:h-full lg:min-h-full lg:w-[40%] lg:max-w-md lg:self-stretch">
+            <img src="images/hero.png" alt="Person working remotely on a laptop at home" class="absolute inset-0 h-full w-full object-cover object-[58%_42%]" width="800" height="600" />
+          </div>
+          <div class="flex min-w-0 flex-1 flex-col">
             <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">MATCHING REMOTE - SINGAPORE</p>
             <h1 class="mt-4 font-serif text-[1.875rem] font-semibold text-slate-900 sm:text-4xl lg:text-[2.75rem]">Flexible remote-work profile support for Singapore-based applicants</h1>
             <div class="mt-5">
@@ -311,8 +312,12 @@ function buildIndex() {
               <a href="#hero-form" class="btn-primary w-full text-center sm:w-auto">Start your profile</a>
               <a href="#steps" class="btn-outline w-full text-center sm:w-auto">See the process</a>
             </div>
+          </div>
         </div>
-        <dl class="mt-8 grid grid-cols-3 gap-3 border-t border-slate-200/80 pt-6 lg:col-span-3 lg:col-start-3 lg:row-start-2 lg:mt-10 lg:pt-8">${stats}</dl>
+        <div class="flex flex-col gap-8 lg:flex-row lg:gap-12">
+          <div class="hidden shrink-0 lg:block lg:w-[40%] lg:max-w-md" aria-hidden="true"></div>
+          <dl class="min-w-0 flex-1 grid grid-cols-3 gap-3 border-t border-slate-200/80 pt-6 lg:mt-0 lg:pt-8">${stats}</dl>
+        </div>
       </div>
       <div id="hero-form" class="mt-12 lg:mt-14">
         <form id="profile-form" class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-lg sm:rounded-3xl">
