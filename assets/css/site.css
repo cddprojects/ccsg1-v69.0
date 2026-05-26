@@ -36,14 +36,6 @@ h3 {
   line-height: 1.42;
 }
 
-@media (min-width: 1024px) {
-  h1,
-  h2,
-  h3 {
-    line-height: 3.5rem;
-  }
-}
-
 .mesh-gradient {
   background:
     radial-gradient(ellipse 80% 60% at 10% 0%, rgba(var(--brand-glow), 0.16), transparent 55%),
@@ -131,6 +123,12 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+  h1,
+  h2,
+  h3 {
+    line-height: 3.5rem;
+  }
+
   #roles-heading {
     white-space: nowrap;
   }

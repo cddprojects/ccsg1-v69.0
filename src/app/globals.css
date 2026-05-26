@@ -101,16 +101,16 @@ h3 {
   line-height: 1.42;
 }
 
+.font-serif {
+  font-family: var(--font-headline), Georgia, "Times New Roman", serif;
+}
+
 @media (min-width: 1024px) {
   h1,
   h2,
   h3 {
     line-height: 3.5rem;
   }
-}
-
-.font-serif {
-  font-family: var(--font-headline), Georgia, "Times New Roman", serif;
 }
 
 .mesh-gradient {
