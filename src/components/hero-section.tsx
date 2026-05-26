@@ -22,17 +22,19 @@ export function HeroSection() {
     <section className="relative overflow-hidden bg-white pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24">
       <div className="mesh-gradient pointer-events-none absolute inset-0" aria-hidden />
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-5 lg:items-start lg:gap-x-12 lg:gap-y-0">
-          <SectionImage
-            src={siteImages.hero}
-            alt="Person working remotely on a laptop at home"
-            priority
-            objectPosition="58% 42%"
-            className="aspect-[16/10] w-full rounded-2xl shadow-lg sm:rounded-3xl lg:col-span-2 lg:row-start-1 lg:aspect-auto lg:h-full lg:w-full lg:min-h-0 lg:self-stretch"
-            sizes="(max-width: 1024px) 100vw, 40vw"
-          />
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-5 lg:items-stretch lg:gap-x-12 lg:gap-y-0">
+          <div className="lg:col-span-2 lg:row-start-1 lg:flex lg:min-h-0">
+            <SectionImage
+              src={siteImages.hero}
+              alt="Person working remotely on a laptop at home"
+              priority
+              objectPosition="58% 42%"
+              className="aspect-[16/10] h-full w-full min-h-0 flex-1 rounded-2xl shadow-lg sm:rounded-3xl lg:aspect-auto"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+            />
+          </div>
 
-          <MotionSection className="lg:col-span-3 lg:row-start-1">
+          <MotionSection className="flex min-w-0 flex-col lg:col-span-3 lg:row-start-1">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
                 MATCHING REMOTE - SINGAPORE
               </p>
