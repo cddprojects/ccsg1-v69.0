@@ -162,7 +162,7 @@ export const roleCards = [
     tags: ["Part-time", "Contract"],
     place: "Remote",
     hours: "Flexible shifts",
-    pay: "Company-confirmed",
+    pay: "SGD 27–31/hr",
     description:
       "Support customers through email, chat, or calls while following company guidelines and service standards.",
     bestFit:
@@ -174,7 +174,7 @@ export const roleCards = [
     tags: ["Part-time", "Contract"],
     place: "Remote",
     hours: "Flexible hours",
-    pay: "Company-confirmed",
+    pay: "SGD 25–29/hr",
     description:
       "Organize records, update spreadsheets, and complete accurate data entry tasks for hiring companies.",
     bestFit:
@@ -186,7 +186,7 @@ export const roleCards = [
     tags: ["Part-time", "Contract"],
     place: "Remote",
     hours: "Project-based",
-    pay: "Company-confirmed",
+    pay: "SGD 29–33/hr",
     description:
       "Assist with content drafts, scheduling support, and marketing coordination under company direction.",
     bestFit:
@@ -198,7 +198,7 @@ export const roleCards = [
     tags: ["Part-time", "Contract"],
     place: "Remote",
     hours: "Flexible hours",
-    pay: "Company-confirmed",
+    pay: "SGD 28–32/hr",
     description:
       "Help coordinate tasks, follow up on requests, and keep remote workflows organized across teams.",
     bestFit:
@@ -210,7 +210,7 @@ export const roleCards = [
     tags: ["Part-time", "Contract"],
     place: "Remote",
     hours: "Task-based",
-    pay: "Company-confirmed",
+    pay: "SGD 27–32/hr",
     description:
       "Review, label, or quality-check data tasks according to project instructions from hiring companies.",
     bestFit:
@@ -222,7 +222,7 @@ export const roleCards = [
     tags: ["Part-time", "Contract"],
     place: "Remote",
     hours: "Flexible shifts",
-    pay: "Company-confirmed",
+    pay: "SGD 28–33/hr",
     description:
       "Monitor community channels, respond to enquiries, and support engagement within company policies.",
     bestFit:
