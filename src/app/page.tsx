@@ -18,11 +18,11 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <StepsSection />
+        <RolesSection />
+        <EligibilitySection />
         <ConfidenceSection />
         <CompensationSection />
         <GetStartedSection />
-        <RolesSection />
-        <EligibilitySection />
         <QuestionsSection />
       </main>
       <SiteFooter />

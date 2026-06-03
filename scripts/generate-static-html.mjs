@@ -352,6 +352,28 @@ function buildIndex() {
     </div>
   </section>
 
+
+  <section id="roles" class="bg-slate-50 py-16 sm:py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <header class="max-w-3xl lg:max-w-none"><h2 id="roles-heading" class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Remote-friendly categories <span class="whitespace-nowrap">at a glance</span></h2>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">These examples help applicants understand the kinds of online work that may appear through third-party hiring companies. They are not a promise that every category is currently open.</p></header>
+      <div class="mt-8 flex flex-col gap-4 rounded-2xl border border-brand-200/50 bg-brand-600 px-5 py-6 text-white sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p class="text-sm leading-relaxed text-brand-50 sm:text-base">Keep your profile ready. Submit your interest once so your details are easier to reference when a relevant category appears.</p>
+        <a href="#hero-form" class="btn-outline mt-4 shrink-0 border-white/40 bg-white text-brand-700 sm:mt-0">Submit profile interest</a>
+      </div>
+      <div class="mt-8 flex flex-col gap-6 sm:mt-10">${rolesHtml}</div>
+    </div>
+  </section>
+
+  <section id="eligibility" class="bg-white py-16 sm:py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Who can take part</h2>
+      <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Before applying, review these general points. Individual roles may have additional criteria set by hiring companies.</p></header>
+      <div class="mt-10 overflow-hidden rounded-2xl border border-slate-200/80 bg-white sm:mt-12 sm:rounded-3xl">${eligibilityHtml}</div>
+    </div>
+  </section>
+
+
   <section class="bg-white py-16 sm:py-20 lg:py-28">
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-5 lg:gap-12">
@@ -385,27 +407,6 @@ function buildIndex() {
       <div class="mt-8 space-y-3 sm:mt-10">${getStartedHtml}</div>
     </div>
   </section>
-
-  <section id="roles" class="bg-slate-50 py-16 sm:py-20 lg:py-28">
-    <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      <header class="max-w-3xl lg:max-w-none"><h2 id="roles-heading" class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Remote-friendly categories <span class="whitespace-nowrap">at a glance</span></h2>
-      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">These examples help applicants understand the kinds of online work that may appear through third-party hiring companies. They are not a promise that every category is currently open.</p></header>
-      <div class="mt-8 flex flex-col gap-4 rounded-2xl border border-brand-200/50 bg-brand-600 px-5 py-6 text-white sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <p class="text-sm leading-relaxed text-brand-50 sm:text-base">Keep your profile ready. Submit your interest once so your details are easier to reference when a relevant category appears.</p>
-        <a href="#hero-form" class="btn-outline mt-4 shrink-0 border-white/40 bg-white text-brand-700 sm:mt-0">Submit profile interest</a>
-      </div>
-      <div class="mt-8 flex flex-col gap-6 sm:mt-10">${rolesHtml}</div>
-    </div>
-  </section>
-
-  <section id="eligibility" class="bg-white py-16 sm:py-20 lg:py-28">
-    <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Who can take part</h2>
-      <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Before applying, review these general points. Individual roles may have additional criteria set by hiring companies.</p></header>
-      <div class="mt-10 overflow-hidden rounded-2xl border border-slate-200/80 bg-white sm:mt-12 sm:rounded-3xl">${eligibilityHtml}</div>
-    </div>
-  </section>
-
   <section class="bg-white py-16 sm:py-20 lg:py-28">
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-6 rounded-2xl border border-brand-200/40 bg-brand-50/50 px-5 py-8 sm:rounded-3xl sm:px-10 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
