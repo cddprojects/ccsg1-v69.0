@@ -245,6 +245,9 @@ function buildIndex() {
 
   const rolesHtml = roleCards
     .map((role) => {
+      const activeBadgeHtml = role.activeBadge
+        ? `<span class="rounded-md bg-green-50 px-2.5 py-1 text-xs font-semibold text-green-700 ring-1 ring-green-200">${esc(role.activeBadge)}</span>`
+        : "";
       const profileFitBadge = `<span class="rounded-md bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700">${esc(role.profileFit)}</span>`;
       const tags = role.tags.map((t) => `<span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">${esc(t)}</span>`).join("");
       const img = role.image.replace(/^\//, "");
@@ -254,7 +257,7 @@ function buildIndex() {
             <img src="${img}" alt="${esc(role.title)}" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
           </div>
           <div class="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
-            <div class="flex flex-wrap items-center gap-2">${profileFitBadge}${tags}</div>
+            <div class="flex flex-wrap items-center gap-2">${activeBadgeHtml}${profileFitBadge}${tags}</div>
             <h3 class="mt-3 font-serif text-lg font-semibold leading-snug text-slate-900 sm:text-xl">${esc(role.title)}</h3>
             <ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
               <li class="inline-flex items-center gap-1">${icon.map}${esc(role.place)}</li>

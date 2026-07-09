@@ -181,6 +181,20 @@ export const roleCards = [
     image: "/images/roles/role-customer-support.png",
   },
   {
+    title: "AI Content Support Assistant",
+    profileFit: "Good fit",
+    activeBadge: "Now Hiring",
+    tags: ["AI tools", "Content checks", "Attention to detail"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
+    description:
+      "Assist with simple AI-supported content tasks such as checking generated text, organizing information, reviewing drafts, and following project guidelines.",
+    supportingNote:
+      "Good fit for applicants who are comfortable using online tools, reading carefully, and following clear instructions.",
+    image: "/images/roles/role-ai-data.png",
+  },
+  {
     title: "Online Merchant Support Assistant",
     profileFit: "Good fit",
     tags: ["Product updates", "Order checks", "Platform admin"],
@@ -218,19 +232,6 @@ export const roleCards = [
     supportingNote:
       "Good fit for applicants who are comfortable communicating online and following a structured response process.",
     image: "/images/roles/role-social-community.png",
-  },
-  {
-    title: "AI Content Support Assistant",
-    profileFit: "Good fit",
-    tags: ["AI tools", "Content checks", "Attention to detail"],
-    place: "Flexible arrangement",
-    hours: "Part-time",
-    pay: "Indicative S$16–S$22/hr",
-    description:
-      "Assist with simple AI-supported content tasks such as checking generated text, organizing information, reviewing drafts, and following project guidelines.",
-    supportingNote:
-      "Good fit for applicants who are comfortable using online tools, reading carefully, and following clear instructions.",
-    image: "/images/roles/role-ai-data.png",
   },
 ] as const;
 

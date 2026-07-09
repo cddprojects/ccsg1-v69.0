@@ -42,6 +42,11 @@ export function RolesSection() {
                   />
                   <div className="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
                     <div className="flex flex-wrap items-center gap-2">
+                      {"activeBadge" in role && role.activeBadge && (
+                        <span className="rounded-md bg-green-50 px-2.5 py-1 text-xs font-semibold text-green-700 ring-1 ring-green-200">
+                          {role.activeBadge}
+                        </span>
+                      )}
                       <span className="rounded-md bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700">
                         {role.profileFit}
                       </span>
