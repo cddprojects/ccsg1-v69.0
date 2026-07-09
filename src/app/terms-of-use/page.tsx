@@ -4,9 +4,9 @@ import { SiteHeader } from "@/components/site-header";
 import { TermsOfUseBody } from "@/components/terms-of-use-body";
 
 export const metadata: Metadata = {
-  title: "Terms of Use | Matching Remote",
+  title: "Terms of Use | Browse Flex",
   description:
-    "Terms governing use of the Matching Remote website and profile-submission information pages.",
+    "Terms governing use of the Browse Flex website and application information pages.",
 };
 
 export default function TermsOfUsePage() {

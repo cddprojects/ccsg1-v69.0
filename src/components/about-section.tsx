@@ -12,8 +12,8 @@ export function AboutSection() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
           <div className="lg:w-[45%] lg:shrink-0">
             <SectionHeading
-              title="Built for a simpler applicant journey"
-              description="Matching Remote keeps the enquiry experience organized, practical, and transparent so applicants know what may happen before a hiring company begins its own review."
+              title="Built for a simpler remote-job application journey"
+              description="Browse Flex keeps the application journey organized, practical, and transparent so applicants can understand the role categories before a hiring company begins its own review."
             />
             <SectionImage
               src={siteImages.about}

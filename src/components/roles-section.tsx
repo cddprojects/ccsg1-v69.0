@@ -12,27 +12,20 @@ export function RolesSection() {
     <SectionShell id="roles" variant="muted">
       <MotionSection>
         <SectionHeading
-          title={
-            <>
-              Remote-friendly categories{" "}
-              <span className="whitespace-nowrap">at a glance</span>
-            </>
-          }
-          titleClassName="lg:whitespace-nowrap"
-          description="These examples help applicants understand the kinds of online work that may appear through third-party hiring companies. They are not a promise that every category is currently open."
+          title="Current remote-friendly role categories"
+          description="These role categories are currently accepting applications from Singapore-based applicants. Final role availability, pay, schedule, screening, and hiring decisions are confirmed by the relevant hiring company."
         />
 
         <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-brand-200/50 bg-brand-600 px-5 py-6 text-white sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:px-8">
           <p className="text-sm leading-relaxed text-brand-50 sm:text-base">
-            Keep your profile ready. Submit your interest once so your details are
-            easier to reference when a relevant category appears.
+            Choose a role category that fits your background and submit your application online.
           </p>
           <Button
             href="#hero-form"
             variant="outline"
             className="w-full shrink-0 border-white/40 bg-white text-brand-700 sm:w-auto"
           >
-            Submit profile interest
+            Apply Now
           </Button>
         </div>
 
@@ -48,7 +41,10 @@ export function RolesSection() {
                     sizes="(max-width: 640px) 100vw, 288px"
                   />
                   <div className="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="rounded-md bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700">
+                        {role.profileFit}
+                      </span>
                       {role.tags.map((tag) => (
                         <span
                           key={tag}
@@ -80,14 +76,14 @@ export function RolesSection() {
                     </p>
                     <div className="mt-3 rounded-xl bg-slate-50 px-4 py-3">
                       <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                        Best fit for
+                        Supporting note
                       </p>
                       <p className="mt-1 line-clamp-2 text-sm text-slate-600 sm:line-clamp-none">
-                        {role.bestFit}
+                        {role.supportingNote}
                       </p>
                     </div>
                     <Button href="#hero-form" className="mt-4 w-full min-h-12 sm:mt-5">
-                      Register Interest
+                      Apply for this role
                     </Button>
                   </div>
                 </div>

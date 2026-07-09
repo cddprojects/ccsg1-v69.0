@@ -4,9 +4,9 @@ import { SiteHeader } from "@/components/site-header";
 import { ThankYouContent } from "@/components/thank-you-content";
 
 export const metadata: Metadata = {
-  title: "Thank You | Matching Remote",
+  title: "Thank You | Browse Flex",
   description:
-    "Your Matching Remote profile interest has been received. Learn what may happen next.",
+    "Your Browse Flex application has been received. Learn what may happen next.",
   robots: { index: false, follow: true },
 };
 

@@ -1,6 +1,6 @@
-export const brandName = "Matching Remote";
-export const brandTagline = "MATCHING REMOTE - SINGAPORE";
-export const brandSupportEmail = "support@matchingremote.com";
-export const brandWebsite = "www.matchingremote.com";
+export const brandName = "Browse Flex";
+export const brandTagline = "Browse Flex – Singapore Remote Roles";
+export const brandSupportEmail = "support@browseflex.com";
+export const brandWebsite = "www.browseflex.com";
 export const brandLogoSrc = "/logo.png";
-export const brandPageTitleSuffix = `${brandName} | Remote-work profile support in Singapore`;
+export const brandPageTitleSuffix = `${brandName} | Remote-friendly role application pathway in Singapore`;

@@ -16,16 +16,16 @@ export function SiteFooter() {
               </span>
             </div>
             <p className="max-w-md text-sm leading-relaxed text-slate-400">
-              Profile support for Singapore-based applicants exploring remote-friendly
-              categories shared by third-party hiring companies.
+              Remote-friendly role application pathway for Singapore-based applicants
+              exploring current role categories shared by hiring partners.
             </p>
             <div className="rounded-2xl border border-slate-800 bg-slate-900/80 p-4 text-xs leading-relaxed text-slate-400">
               <p className="font-semibold text-slate-200">Disclaimer</p>
               <p className="mt-2">
-                {brandName} provides profile support and general process information.
-                It does not employ applicants directly. Role availability,
-                compensation, verification, and hiring outcomes are determined by
-                third-party hiring companies.
+                {brandName} provides an application pathway and general process information.
+                It does not employ applicants directly unless expressly stated. Role availability,
+                compensation, verification, onboarding, and hiring outcomes are determined by
+                the relevant hiring company.
               </p>
             </div>
           </div>

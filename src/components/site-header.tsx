@@ -32,7 +32,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Button href="#hero-form" className="px-5 py-2.5 text-sm">
-            Get updates
+            Apply Now
           </Button>
         </nav>
 
@@ -63,7 +63,7 @@ export function SiteHeader() {
             ))}
           </ul>
           <Button href="#hero-form" className="mt-3 w-full min-h-12" onClick={() => setOpen(false)}>
-            Get updates
+            Apply Now
           </Button>
         </nav>
       ) : null}

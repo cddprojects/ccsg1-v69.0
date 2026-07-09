@@ -14,101 +14,98 @@ export const navLinks = [
 ] as const;
 
 export const heroBullets = [
-  "Remote-focused categories",
-  "Flexible schedule awareness",
-  "Third-party hiring process",
-  "Profile-based review",
+  "Remote-friendly role categories",
+  "Flexible schedule options",
+  "Hiring-partner review process",
+  "Simple application pathway",
 ] as const;
 
 export const heroStats = [
-  { value: "3", label: "basic steps to understand" },
-  { value: "1", label: "profile submission pathway" },
-  { value: "Anytime", label: "send an enquiry when convenient" },
+  { value: "6", label: "current role categories" },
+  { value: "1", label: "simple application pathway" },
+  { value: "Anytime", label: "submit your application online" },
 ] as const;
 
-export const profileReadiness = [
-  "Applicant profile",
-  "Category matching",
-  "Next-step contact",
-] as const;
+export const formSectionDescription =
+  "Submit your application for current remote-friendly role categories. Your details may be reviewed against suitable opportunities shared by hiring partners.";
 
 export const jobPositions = [
-  "Remote Customer Support Associate",
-  "Remote Admin & Data Entry Assistant",
-  "Remote Marketing & Content Support Assistant",
-  "Remote Operations & Coordination Assistant",
-  "AI Data Support Assistant",
-  "Remote Social Media & Community Support Assistant",
+  "Remote Admin Assistant",
+  "Remote Customer Support Assistant",
+  "Online Merchant Support Assistant",
+  "E-Commerce Support Assistant",
+  "Online Sales Support Assistant",
+  "AI Content Support Assistant",
 ] as const;
 
 export const aboutCards = [
   {
     id: "A",
-    title: "One organized profile",
+    title: "One organized application",
     description:
-      "Put your contact details, work preferences, and relevant background into one concise profile.",
+      "Submit your contact details, availability, work preferences, and relevant background through one clear application form.",
   },
   {
     id: "B",
-    title: "Plain-language process notes",
+    title: "Clear process notes",
     description:
-      "See how profile review, company contact, screening, and role confirmation usually fit together.",
+      "Understand how application review, company contact, screening, and role confirmation usually work.",
   },
   {
     id: "C",
-    title: "Remote-friendly categories",
+    title: "Remote-friendly roles",
     description:
-      "Explore common online work areas, including customer support, admin, content, operations, AI data support, and community coordination.",
+      "Explore current online work categories including admin support, customer support, merchant support, e-commerce support, online sales support, and AI content support.",
   },
 ] as const;
 
 export const stepsCards = [
   {
     step: "1",
-    title: "Send your interest",
+    title: "Submit your application",
     description:
-      "Share your contact details, availability, preferred categories, and a short skills summary.",
+      "Share your contact details, availability, preferred role category, and a short skills summary.",
   },
   {
     step: "2",
-    title: "Category review",
+    title: "Application review",
     description:
-      "Your information may be compared with current or upcoming categories shared with the platform.",
+      "Your application may be reviewed against currently available role categories shared by hiring partners.",
   },
   {
     step: "3",
     title: "Company-led next steps",
     description:
-      "If a company considers your profile relevant, it may contact you about screening, interviews, role scope, and work arrangements.",
+      "If a hiring company considers your application relevant, it may contact you about screening, interviews, role scope, work arrangements, and onboarding requirements.",
   },
 ] as const;
 
 export const confidenceItems = [
   {
-    title: "General role guidance",
+    title: "Role guidance",
     description:
-      "Review common tasks and expectations before sharing more information with a hiring company.",
+      "Review common tasks and expectations before moving forward with a hiring company.",
   },
   {
     title: "Process transparency",
     description:
-      "Understand that role details, pay, verification, and scheduling are confirmed by the hiring company.",
+      "Role details, pay, verification, onboarding, and scheduling are confirmed by the hiring company.",
   },
   {
     title: "Applicant awareness",
     description:
-      "Exercise discretion, review role details, and avoid sharing sensitive information until necessary.",
+      "Exercise discretion, review role details carefully, and avoid sharing sensitive information until it is necessary for a legitimate hiring step.",
   },
   {
     title: "General enquiries",
     description:
-      "Contact support for platform-related questions. Hiring decisions remain with third-party companies.",
+      "Contact Browse Flex for platform-related questions. Hiring decisions remain with the relevant hiring company.",
   },
 ] as const;
 
 export const compensationBullets = [
-  "Actual pay may depend on role scope, hours, skills, experience, company requirements, and location rules.",
-  "Any examples or ranges shown in communications should be treated as general information only.",
+  "Actual pay may depend on role scope, hours, skills, experience, company requirements, and applicable location rules.",
+  "Pay ranges shown on this website are indicative for the listed role categories and may be confirmed or adjusted by the hiring company during the review process.",
   "Final outcomes such as interviews, job offers, placement, or earnings depend on the hiring company and role requirements.",
 ] as const;
 
@@ -135,9 +132,9 @@ export const getStartedCards = [
 
 export const eligibilityItems = [
   {
-    title: "Working-age and work eligibility",
+    title: "Working age and work eligibility",
     description:
-      "Meet minimum age requirements and have appropriate eligibility to work where required.",
+      "Meet the applicable working-age and work-eligibility requirements for Singapore-based remote-friendly roles. Hiring companies may request verification where required.",
   },
   {
     title: "Communication readiness",
@@ -152,86 +149,92 @@ export const eligibilityItems = [
   {
     title: "Accurate information",
     description:
-      "Provide accurate contact and background details. Standard verification may be required by a hiring company.",
+      "Provide accurate contact and background details. Standard verification may be required by a hiring company before role confirmation.",
   },
 ] as const;
 
 export const roleCards = [
   {
-    title: "Remote Customer Support Associate",
-    tags: ["Part-time", "Contract"],
-    place: "Remote",
-    hours: "Flexible shifts",
-    pay: "SGD 27–31/hr",
+    title: "Remote Admin Assistant",
+    profileFit: "Good fit",
+    tags: ["Basic computer", "Attention to detail", "Online admin"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
     description:
-      "Support customers through email, chat, or calls while following company guidelines and service standards.",
-    bestFit:
-      "Applicants comfortable with clear communication, patience, and structured online support workflows.",
-    image: "/images/roles/role-customer-support.png",
-  },
-  {
-    title: "Remote Admin & Data Entry Assistant",
-    tags: ["Part-time", "Contract"],
-    place: "Remote",
-    hours: "Flexible hours",
-    pay: "SGD 25–29/hr",
-    description:
-      "Organize records, update spreadsheets, and complete accurate data entry tasks for hiring companies.",
-    bestFit:
-      "Detail-oriented applicants who work carefully with documents, forms, and everyday office tools.",
+      "Help with simple admin tasks such as updating records, organizing documents, checking details, and supporting daily online workflows.",
+    supportingNote:
+      "Good fit for applicants who are detail-oriented and comfortable using basic computer tools.",
     image: "/images/roles/role-admin-data.png",
   },
   {
-    title: "Remote Marketing & Content Support Assistant",
-    tags: ["Part-time", "Contract"],
-    place: "Remote",
-    hours: "Project-based",
-    pay: "SGD 29–33/hr",
+    title: "Remote Customer Support Assistant",
+    profileFit: "Good fit",
+    tags: ["Customer replies", "Communication", "Online tools"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
     description:
-      "Assist with content drafts, scheduling support, and marketing coordination under company direction.",
-    bestFit:
-      "Applicants with writing interest, basic design awareness, and comfort using online collaboration tools.",
-    image: "/images/roles/role-marketing-content.png",
+      "Support customer enquiries through chat, email, or calls while following company guidelines and response templates.",
+    supportingNote:
+      "Good fit for applicants who are patient, clear in communication, and comfortable helping customers online.",
+    image: "/images/roles/role-customer-support.png",
   },
   {
-    title: "Remote Operations & Coordination Assistant",
-    tags: ["Part-time", "Contract"],
-    place: "Remote",
-    hours: "Flexible hours",
-    pay: "SGD 28–32/hr",
+    title: "Online Merchant Support Assistant",
+    profileFit: "Good fit",
+    tags: ["Product updates", "Order checks", "Platform admin"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
     description:
-      "Help coordinate tasks, follow up on requests, and keep remote workflows organized across teams.",
-    bestFit:
-      "Organized applicants who can track priorities, communicate clearly, and support process consistency.",
+      "Support online merchants with product updates, order checks, simple account tasks, and platform-related follow-ups.",
+    supportingNote:
+      "Good fit for applicants who are comfortable using online platforms and following clear step-by-step instructions.",
     image: "/images/roles/role-operations.png",
   },
   {
-    title: "AI Data Support Assistant",
-    tags: ["Part-time", "Contract"],
-    place: "Remote",
-    hours: "Task-based",
-    pay: "SGD 27–32/hr",
+    title: "E-Commerce Support Assistant",
+    profileFit: "Good fit",
+    tags: ["Online store", "Order checks", "Product updates"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
     description:
-      "Review, label, or quality-check data tasks according to project instructions from hiring companies.",
-    bestFit:
-      "Applicants who follow guidelines closely, stay focused, and complete repetitive review tasks accurately.",
-    image: "/images/roles/role-ai-data.png",
+      "Assist with online store support tasks such as updating product details, checking order information, organizing simple records, and following up on platform-related requests.",
+    supportingNote:
+      "Good fit for applicants who are comfortable using online tools, checking details carefully, and supporting e-commerce workflows.",
+    image: "/images/roles/role-marketing-content.png",
   },
   {
-    title: "Remote Social Media & Community Support Assistant",
-    tags: ["Part-time", "Contract"],
-    place: "Remote",
-    hours: "Flexible shifts",
-    pay: "SGD 28–33/hr",
+    title: "Online Sales Support Assistant",
+    profileFit: "Moderate fit",
+    tags: ["Customer replies", "Lead follow-up", "Online tools"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
     description:
-      "Monitor community channels, respond to enquiries, and support engagement within company policies.",
-    bestFit:
-      "Applicants comfortable with online communities, tone awareness, and timely written responses.",
+      "Support online sales teams with simple enquiry replies, lead follow-ups, appointment updates, and basic customer information checks.",
+    supportingNote:
+      "Good fit for applicants who are comfortable communicating online and following a structured response process.",
     image: "/images/roles/role-social-community.png",
+  },
+  {
+    title: "AI Content Support Assistant",
+    profileFit: "Good fit",
+    tags: ["AI tools", "Content checks", "Attention to detail"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
+    description:
+      "Assist with simple AI-supported content tasks such as checking generated text, organizing information, reviewing drafts, and following project guidelines.",
+    supportingNote:
+      "Good fit for applicants who are comfortable using online tools, reading carefully, and following clear instructions.",
+    image: "/images/roles/role-ai-data.png",
   },
 ] as const;
 
 export const footerQuickLinks = navLinks;
 
 export const consentText =
-  "I agree to be contacted regarding my profile interest and understand that hiring decisions are made by third-party companies.";
+  "By submitting this form, you agree that Browse Flex may collect, use, and disclose your submitted details for application review, communication, and role consideration with relevant hiring partners, in accordance with our Privacy Policy.";

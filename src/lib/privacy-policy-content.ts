@@ -1,11 +1,11 @@
 export const privacyPolicyMeta = {
   title: "Privacy Policy",
   lastUpdated: "6 May 2026",
-  brand: "Matching Remote",
+  brand: "Browse Flex",
 } as const;
 
 export const privacyPolicyIntro =
-  'This Privacy Policy describes how Matching Remote ("we", "us", "our") collects, uses, discloses, and protects personal data when you use our website, profile-submission forms, applicant enquiry services, and related profile support services at www.matchingremote.com, where applicable (the "Services"). It is intended to align with the Personal Data Protection Act 2012 of Singapore ("PDPA"). This Policy does not constitute legal advice.';
+  'This Privacy Policy describes how Browse Flex ("we", "us", "our") collects, uses, discloses, and protects personal data when you use our website, application forms, applicant enquiry services, and related application support services at www.browseflex.com, where applicable (the "Services"). It is intended to align with the Personal Data Protection Act 2012 of Singapore ("PDPA"). This Policy does not constitute legal advice.';
 
 export const privacyPolicySections = [
   {
@@ -14,20 +14,20 @@ export const privacyPolicySections = [
     blocks: [
       {
         type: "paragraph" as const,
-        text: "Matching Remote helps Singapore-based applicants submit or prepare a concise profile for consideration when remote-friendly role categories are shared by third-party hiring companies.",
+        text: "Browse Flex provides an online application pathway for Singapore-based applicants exploring current remote-friendly role categories shared by third-party hiring companies.",
       },
       {
         type: "paragraph" as const,
-        text: "The platform focuses on remote-friendly support categories such as customer service, administration, data entry, marketing content, operations coordination, AI data review, and social media or community support. We may provide general process information and profile support, but company-specific screening, role details, compensation, verification, work arrangements, and hiring decisions remain with the relevant third-party hiring company.",
+        text: "The platform focuses on remote-friendly role categories such as remote admin support, customer support, online merchant support, e-commerce support, online sales support, and AI content support. We may provide general process information and application support, but company-specific screening, role details, compensation, verification, work arrangements, onboarding, and hiring decisions remain with the relevant third-party hiring company.",
       },
       {
         type: "paragraph" as const,
-        text: "Matching Remote is generally not your employer and does not guarantee interviews, job offers, placement, earnings, or role availability.",
+        text: "Browse Flex is generally not your employer and does not guarantee interviews, job offers, placement, earnings, or role availability unless expressly stated in writing.",
       },
       {
         type: "contact" as const,
         lines: [
-          { label: "Contact", value: "support@matchingremote.com" },
+          { label: "Contact", value: "support@browseflex.com" },
           {
             label: "Business correspondence",
             value: "Ang Mo Kio Avenue 3, 569933, Ang Mo Kio, Singapore",
@@ -48,8 +48,8 @@ export const privacyPolicySections = [
         type: "list" as const,
         items: [
           "Identity and contact details — such as your name, email address, phone number, and other contact information.",
-          "Applicant profile information — such as availability, preferred role categories, work preferences, skills summary, background information, experience, remote-work readiness, work eligibility, and information you choose to submit.",
-          "Category matching information — such as notes or indicators relating to your potential suitability for remote-friendly categories including customer support, administrative support, data entry, content or marketing support, operations coordination, AI data support, and social media or community support.",
+          "Application information — such as availability, preferred role category, work preferences, skills summary, background information, experience, remote-work readiness, work eligibility, and information you choose to submit.",
+          "Role review information — such as notes or indicators relating to your potential suitability for remote-friendly role categories including remote admin support, customer support, online merchant support, e-commerce support, online sales support, and AI content support.",
           "Technical and usage data — such as IP address, browser type, device information, pages viewed, approximate location derived from IP address, cookies, pixels, or similar technologies where applicable.",
           "Communications — such as the content of emails, messages, enquiries, or support requests you send to us.",
         ],
@@ -71,12 +71,12 @@ export const privacyPolicySections = [
       {
         type: "list" as const,
         items: [
-          "Operating the Services and processing your profile submission or enquiry;",
-          "Reviewing your submitted information for relevance to current or upcoming remote-friendly role categories;",
-          "Supporting profile readiness, category matching, and applicant communication;",
-          "Considering or presenting your profile in connection with opportunities shared by third-party hiring companies, where you have been informed and consented as required;",
-          "Communicating with you about the platform, your submission, relevant categories, next-step actions, or support enquiries;",
-          "Maintaining internal profile, enquiry, screening, and matching records;",
+          "Operating the Services and processing your application or enquiry;",
+          "Reviewing your submitted information for relevance to current remote-friendly role categories;",
+          "Supporting application readiness, role-category review, and applicant communication;",
+          "Considering or presenting your application in connection with opportunities shared by third-party hiring companies, where you have been informed and consented as required;",
+          "Communicating with you about the platform, your application, relevant role categories, next-step actions, or support enquiries;",
+          "Maintaining internal application, enquiry, screening, and matching records;",
           "Improving platform security, preventing misuse, and complying with legal or regulatory obligations;",
           "Analytics and service improvement, often using aggregated or de-identified information where appropriate.",
         ],
@@ -89,15 +89,15 @@ export const privacyPolicySections = [
     blocks: [
       {
         type: "paragraph" as const,
-        text: "Matching Remote may share relevant profile or applicant information with third-party hiring companies where your profile appears relevant to a remote-friendly role category or opportunity.",
+        text: "Browse Flex may share relevant application or applicant information with third-party hiring companies where your application appears relevant to a current remote-friendly role category or opportunity.",
       },
       {
         type: "paragraph" as const,
-        text: "Those companies may contact you directly about screening, interviews, role scope, work arrangements, verification, contract terms, compensation, or other next steps. Their use of your personal data is governed by their own privacy notices, agreements, and applicable legal obligations.",
+        text: "Those companies may contact you directly about screening, interviews, role scope, work arrangements, verification, contract terms, compensation, onboarding, or other next steps. Their use of your personal data is governed by their own privacy notices, agreements, and applicable legal obligations.",
       },
       {
         type: "paragraph" as const,
-        text: "We do not control how third-party hiring companies process personal data once it has been legitimately shared for recruitment or role consideration purposes. We also do not control their hiring decisions, compensation terms, schedules, verification requirements, or role availability.",
+        text: "We do not control how third-party hiring companies process personal data once it has been legitimately shared for recruitment or role consideration purposes. We also do not control their hiring decisions, compensation terms, schedules, verification requirements, onboarding process, or final role availability.",
       },
     ],
   },
@@ -139,7 +139,7 @@ export const privacyPolicySections = [
     blocks: [
       {
         type: "paragraph" as const,
-        text: "We retain personal data only for as long as reasonably necessary for the purposes for which it was collected, including profile review, category matching, applicant communication, legal, accounting, reporting, dispute-resolution, or business record purposes.",
+        text: "We retain personal data only for as long as reasonably necessary for the purposes for which it was collected, including application review, role-category matching, applicant communication, legal, accounting, reporting, dispute-resolution, or business record purposes.",
       },
       {
         type: "paragraph" as const,
@@ -181,8 +181,8 @@ export const privacyPolicySections = [
       },
       {
         type: "paragraph" as const,
-        text: "To exercise these rights or raise a concern, contact us at support@matchingremote.com. We may need to verify your identity before responding.",
-        email: "support@matchingremote.com",
+        text: "To exercise these rights or raise a concern, contact us at support@browseflex.com. We may need to verify your identity before responding.",
+        email: "support@browseflex.com",
       },
     ],
   },
@@ -196,7 +196,7 @@ export const privacyPolicySections = [
       },
       {
         type: "paragraph" as const,
-        text: "Withdrawal of consent may affect our ability to provide certain Services, such as reviewing your profile, matching it with relevant categories, presenting it to third-party hiring companies, or contacting you about next-step opportunities.",
+        text: "Withdrawal of consent may affect our ability to provide certain Services, such as reviewing your application, matching it with relevant role categories, presenting it to third-party hiring companies, or contacting you about next-step opportunities.",
       },
     ],
   },

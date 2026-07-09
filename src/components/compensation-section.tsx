@@ -13,9 +13,9 @@ export function CompensationSection() {
             How compensation is usually confirmed
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-            Compensation structure is not universal. Depending on the company and
-            work scope, it may be hourly, task-based, shift-based, or
-            project-based.
+            Compensation may differ depending on the company, role scope, schedule,
+            skills, experience, and work arrangement. Pay may be hourly,
+            task-based, shift-based, or project-based.
           </p>
         </header>
 

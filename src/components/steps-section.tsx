@@ -17,8 +17,8 @@ export function StepsSection() {
     <SectionShell id="steps" variant="muted">
       <MotionSection>
         <SectionHeading
-          title="How the profile path works"
-          description="Matching Remote explains the general path. Company-specific screening, role details, and hiring decisions remain with the third-party hiring company."
+          title="How the application process works"
+          description="Browse Flex provides an application pathway for current remote-friendly role categories. Company-specific screening, role details, and hiring decisions remain with the relevant hiring company."
         />
 
         <SectionImage

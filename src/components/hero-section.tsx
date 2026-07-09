@@ -4,12 +4,13 @@ import { useRouter } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import {
   consentText,
+  formSectionDescription,
   heroBullets,
   heroStats,
   jobPositions,
-  profileReadiness,
   siteImages,
 } from "@/lib/content";
+import { brandTagline } from "@/lib/brand";
 import { MotionSection } from "@/components/motion-section";
 import { Button } from "@/components/ui/button";
 import { ReadMore } from "@/components/ui/read-more";
@@ -37,14 +38,14 @@ export function HeroSection() {
 
             <div className="flex min-w-0 flex-1 flex-col">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
-                MATCHING REMOTE - SINGAPORE
+                {brandTagline}
               </p>
               <h1 className="mt-4 font-serif text-[1.875rem] font-semibold text-slate-900 sm:text-4xl lg:text-[2.75rem]">
-                Flexible remote-work profile support for Singapore-based applicants
+                Apply for remote-friendly part-time roles in Singapore
               </h1>
               <ReadMore
                 className="mt-5"
-                text="Matching Remote helps applicants submit a profile for consideration when remote-friendly role categories are shared by third-party hiring companies. The platform focuses on remote-friendly support categories such as customer service, administration, data entry, marketing content, operations coordination, AI data review, and social media community support. Availability, responsibilities, pay, and selection criteria are confirmed by each hiring company."
+                text="Browse Flex helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce support, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company."
                 collapsedLines={4}
                 fullFrom="lg"
               />
@@ -63,10 +64,10 @@ export function HeroSection() {
 
               <div className="mt-6 flex w-full flex-col gap-3 sm:flex-row">
                 <Button href="#hero-form" className="w-full sm:w-auto">
-                  Start your profile
+                  Apply Now
                 </Button>
-                <Button href="#steps" variant="outline" className="w-full sm:w-auto">
-                  See the process
+                <Button href="#roles" variant="outline" className="w-full sm:w-auto">
+                  View Current Roles
                 </Button>
               </div>
             </div>
@@ -93,19 +94,11 @@ export function HeroSection() {
           <div className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-lg sm:rounded-3xl">
             <div className="border-b border-slate-100 bg-slate-50/90 px-5 py-5 sm:px-8">
               <h2 className="font-serif text-xl font-semibold text-slate-900 sm:text-2xl">
-                Profile readiness
+                Apply for remote-friendly roles
               </h2>
-              <ul className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6">
-                {profileReadiness.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-2 text-sm text-slate-600"
-                  >
-                    <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                {formSectionDescription}
+              </p>
             </div>
 
             <form
@@ -177,7 +170,7 @@ export function HeroSection() {
               </div>
 
               <Button type="submit" className="w-full min-h-12 text-base">
-                Submit
+                Submit Application
               </Button>
             </form>
           </div>

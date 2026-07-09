@@ -4,9 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Matching Remote",
+  title: "Privacy Policy | Browse Flex",
   description:
-    "How Matching Remote collects, uses, and protects personal data for Singapore-based applicants under the PDPA.",
+    "How Browse Flex collects, uses, and protects personal data for Singapore-based applicants under the PDPA.",
 };
 
 export default function PrivacyPolicyPage() {

@@ -18,7 +18,7 @@ export function EligibilitySection() {
     <SectionShell id="eligibility">
       <MotionSection>
         <SectionHeading
-          title="Who can take part"
+          title="Who can apply"
           description="Before applying, review these general points. Individual roles may have additional criteria set by hiring companies."
         />
 

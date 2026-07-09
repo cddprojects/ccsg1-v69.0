@@ -13,8 +13,8 @@ export function ConfidenceSection() {
       <MotionSection>
         <div className="lg:grid lg:grid-cols-5 lg:gap-12">
           <SectionHeading
-            title="Know what to check before moving forward"
-            description="Remote roles can differ in schedule, tools, verification, and pay terms. Matching Remote keeps the guidance practical so you can review each opportunity carefully."
+            title="Know what to check before accepting a role"
+            description="Remote roles can differ in schedule, tools, verification, and pay terms. Review each opportunity carefully before accepting any work arrangement."
             className="lg:col-span-2"
           />
 

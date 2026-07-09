@@ -13,17 +13,17 @@ import {
   confidenceItems,
   consentText,
   eligibilityItems,
+  formSectionDescription,
   getStartedCards,
   heroBullets,
   heroStats,
   jobPositions,
-  profileReadiness,
   roleCards,
   siteImages,
   stepsCards,
 } from "../src/lib/content.ts";
 import { termsOfUseIntro, termsOfUseMeta, termsOfUseSections } from "../src/lib/terms-of-use-content.ts";
-import { brandName, brandPageTitleSuffix } from "../src/lib/brand.ts";
+import { brandName, brandPageTitleSuffix, brandSupportEmail, brandTagline } from "../src/lib/brand.ts";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const outDir = join(root, "static-html");
@@ -97,15 +97,15 @@ function header(homeLink) {
   return `<header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/60 bg-white/90 backdrop-blur-md">
   <div class="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:h-16 sm:px-6 lg:px-8">
     <a href="${indexPrefix}" class="flex min-w-0 items-center gap-2">
-      <img src="logo.png" alt="${brandName} logo" class="h-8 w-8 shrink-0 rounded-lg object-contain sm:h-9 sm:w-9 sm:rounded-xl" width="36" height="36" />
-      <span class="truncate font-serif text-lg font-semibold text-slate-900 sm:text-xl">Matching Remote</span>
+      <img src="logo.png" alt="${esc(brandName)} logo" class="h-8 w-8 shrink-0 rounded-lg object-contain sm:h-9 sm:w-9 sm:rounded-xl" width="36" height="36" />
+      <span class="truncate font-serif text-lg font-semibold text-slate-900 sm:text-xl">${esc(brandName)}</span>
     </a>
     <nav class="hidden items-center gap-6 lg:flex">
       <a href="${indexPrefix}#about" class="text-sm text-slate-600 hover:text-brand-700">About</a>
       <a href="${indexPrefix}#steps" class="text-sm text-slate-600 hover:text-brand-700">How it works</a>
       <a href="${indexPrefix}#roles" class="text-sm text-slate-600 hover:text-brand-700">Roles</a>
       <a href="${indexPrefix}#eligibility" class="text-sm text-slate-600 hover:text-brand-700">Eligibility</a>
-      <a href="${indexPrefix}#hero-form" class="btn-primary px-5 py-2.5 text-sm">Get updates</a>
+      <a href="${indexPrefix}#hero-form" class="btn-primary px-5 py-2.5 text-sm">Apply Now</a>
     </nav>
     <button id="menu-btn" type="button" class="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 lg:hidden" aria-expanded="false" aria-label="Toggle menu">${icon.menu}</button>
   </div>
@@ -116,7 +116,7 @@ function header(homeLink) {
       <li><a href="${indexPrefix}#roles" class="block rounded-lg px-3 py-3 text-base text-slate-700">Roles</a></li>
       <li><a href="${indexPrefix}#eligibility" class="block rounded-lg px-3 py-3 text-base text-slate-700">Eligibility</a></li>
     </ul>
-    <a href="${indexPrefix}#hero-form" class="btn-primary mt-3 block w-full text-center">Get updates</a>
+    <a href="${indexPrefix}#hero-form" class="btn-primary mt-3 block w-full text-center">Apply Now</a>
   </nav>
 </header>`;
 }
@@ -128,13 +128,13 @@ function footer(homeLink) {
     <div class="flex flex-col gap-10">
       <div class="space-y-4">
         <div class="flex items-center gap-2">
-          <img src="logo.png" alt="${brandName} logo" class="h-9 w-9 shrink-0 rounded-xl object-contain" width="36" height="36" />
-          <span class="font-serif text-xl font-semibold text-white">Matching Remote</span>
+          <img src="logo.png" alt="${esc(brandName)} logo" class="h-9 w-9 shrink-0 rounded-xl object-contain" width="36" height="36" />
+          <span class="font-serif text-xl font-semibold text-white">${esc(brandName)}</span>
         </div>
-        <p class="max-w-md text-sm leading-relaxed text-slate-400">Profile support for Singapore-based applicants exploring remote-friendly categories shared by third-party hiring companies.</p>
+        <p class="max-w-md text-sm leading-relaxed text-slate-400">Remote-friendly role application pathway for Singapore-based applicants exploring current role categories shared by hiring partners.</p>
         <div class="rounded-2xl border border-slate-800 bg-slate-900/80 p-4 text-xs leading-relaxed text-slate-400">
           <p class="font-semibold text-slate-200">Disclaimer</p>
-          <p class="mt-2">Matching Remote provides profile support and general process information. It does not employ applicants directly. Role availability, compensation, verification, and hiring outcomes are determined by third-party hiring companies.</p>
+          <p class="mt-2">${esc(brandName)} provides an application pathway and general process information. It does not employ applicants directly unless expressly stated. Role availability, compensation, verification, onboarding, and hiring outcomes are determined by the relevant hiring company.</p>
         </div>
       </div>
       <div class="grid grid-cols-1 gap-8 border-t border-slate-800 pt-8 sm:grid-cols-3 sm:gap-6">
@@ -156,13 +156,13 @@ function footer(homeLink) {
         </div>
         <div>
           <p class="text-sm font-semibold text-white">Support</p>
-          <p class="mt-3 text-sm text-brand-200">support@matchingremote.com</p>
+          <p class="mt-3 text-sm text-brand-200">${esc(brandSupportEmail)}</p>
           <p class="mt-3 text-sm leading-relaxed text-slate-400"><span class="block font-medium text-slate-300">Business Correspondence Address</span>Ang Mo Kio Avenue 3, 569933, Ang Mo Kio</p>
         </div>
       </div>
     </div>
     <div class="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-      <p>&copy; ${new Date().getFullYear()} Matching Remote. All rights reserved.</p>
+      <p>&copy; ${new Date().getFullYear()} ${esc(brandName)}. All rights reserved.</p>
       <a href="${indexPrefix}" class="inline-block py-2 hover:text-slate-300">Back to top</a>
     </div>
   </div>
@@ -171,7 +171,7 @@ function footer(homeLink) {
 
 function buildIndex() {
   const heroText =
-    "Matching Remote helps applicants submit a profile for consideration when remote-friendly role categories are shared by third-party hiring companies. The platform focuses on remote-friendly support categories such as customer service, administration, data entry, marketing content, operations coordination, AI data review, and social media community support. Availability, responsibilities, pay, and selection criteria are confirmed by each hiring company.";
+    "Browse Flex helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce support, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company.";
 
   const bullets = heroBullets
     .map(
@@ -185,10 +185,6 @@ function buildIndex() {
       (s) =>
         `<div><dt class="font-serif text-xl font-semibold text-brand-700 sm:text-2xl">${esc(s.value)}</dt><dd class="mt-0.5 text-xs leading-snug text-slate-600 sm:text-sm">${esc(s.label)}</dd></div>`,
     )
-    .join("");
-
-  const readiness = profileReadiness
-    .map((r) => `<li class="flex items-center gap-2 text-sm text-slate-600">${icon.checkSm}${esc(r)}</li>`)
     .join("");
 
   const jobs = jobPositions.map((j) => `<option>${esc(j)}</option>`).join("");
@@ -249,6 +245,7 @@ function buildIndex() {
 
   const rolesHtml = roleCards
     .map((role) => {
+      const profileFitBadge = `<span class="rounded-md bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700">${esc(role.profileFit)}</span>`;
       const tags = role.tags.map((t) => `<span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">${esc(t)}</span>`).join("");
       const img = role.image.replace(/^\//, "");
       return `<article class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm sm:rounded-3xl">
@@ -257,7 +254,7 @@ function buildIndex() {
             <img src="${img}" alt="${esc(role.title)}" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
           </div>
           <div class="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
-            <div class="flex flex-wrap gap-2">${tags}</div>
+            <div class="flex flex-wrap items-center gap-2">${profileFitBadge}${tags}</div>
             <h3 class="mt-3 font-serif text-lg font-semibold leading-snug text-slate-900 sm:text-xl">${esc(role.title)}</h3>
             <ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
               <li class="inline-flex items-center gap-1">${icon.map}${esc(role.place)}</li>
@@ -265,8 +262,8 @@ function buildIndex() {
               <li class="inline-flex items-center gap-1">${icon.wallet}${esc(role.pay)}</li>
             </ul>
             <p class="mt-3 line-clamp-2 text-sm leading-relaxed text-slate-600 sm:line-clamp-none sm:text-base">${esc(role.description)}</p>
-            <div class="mt-3 rounded-xl bg-slate-50 px-4 py-3"><p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Best fit for</p><p class="mt-1 line-clamp-2 text-sm text-slate-600 sm:line-clamp-none">${esc(role.bestFit)}</p></div>
-            <a href="#hero-form" class="btn-primary mt-4 w-full text-center sm:mt-5">Register Interest</a>
+            <div class="mt-3 rounded-xl bg-slate-50 px-4 py-3"><p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Supporting note</p><p class="mt-1 line-clamp-2 text-sm text-slate-600 sm:line-clamp-none">${esc(role.supportingNote)}</p></div>
+            <a href="#hero-form" class="btn-primary mt-4 w-full text-center sm:mt-5">Apply for this role</a>
           </div>
         </div>
       </article>`;
@@ -298,8 +295,8 @@ function buildIndex() {
             <img src="images/hero.png" alt="Person working remotely on a laptop at home" class="size-full object-cover object-[58%_42%]" width="800" height="600" loading="eager" />
           </div>
           <div class="flex min-w-0 flex-1 flex-col">
-            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">MATCHING REMOTE - SINGAPORE</p>
-            <h1 class="mt-4 font-serif text-[1.875rem] font-semibold text-slate-900 sm:text-4xl lg:text-[2.75rem]">Flexible remote-work profile support for Singapore-based applicants</h1>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">${esc(brandTagline)}</p>
+            <h1 class="mt-4 font-serif text-[1.875rem] font-semibold text-slate-900 sm:text-4xl lg:text-[2.75rem]">Apply for remote-friendly part-time roles in Singapore</h1>
             <div class="mt-5">
               <p id="read-more-text" class="read-more-clamped text-base leading-relaxed text-slate-600 sm:text-lg">${esc(heroText)}</p>
               <button id="read-more-btn" type="button" class="read-more-toggle mt-3 inline-flex items-center gap-1 text-sm font-medium text-brand-700 sm:hidden" aria-expanded="false">
@@ -309,8 +306,8 @@ function buildIndex() {
             </div>
             <ul class="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">${bullets}</ul>
             <div class="mt-6 flex w-full flex-col gap-3 sm:flex-row">
-              <a href="#hero-form" class="btn-primary w-full text-center sm:w-auto">Start your profile</a>
-              <a href="#steps" class="btn-outline w-full text-center sm:w-auto">See the process</a>
+              <a href="#hero-form" class="btn-primary w-full text-center sm:w-auto">Apply Now</a>
+              <a href="#roles" class="btn-outline w-full text-center sm:w-auto">View Current Roles</a>
             </div>
           </div>
         </div>
@@ -320,8 +317,39 @@ function buildIndex() {
         </div>
       </div>
       <div id="hero-form" class="mt-12 lg:mt-14">
-        <div data-cddform="cc-sg10-singapore10" data-origin="www.matching-remote.com"></div>
-        <script src="https://staging.chatfromforms.com/form-embed.js?v=0.1" defer></script>
+        <div class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-lg sm:rounded-3xl">
+          <div class="border-b border-slate-100 bg-slate-50/90 px-5 py-5 sm:px-8">
+            <h2 class="font-serif text-xl font-semibold text-slate-900 sm:text-2xl">Apply for remote-friendly roles</h2>
+            <p class="mt-3 text-sm leading-relaxed text-slate-600">${esc(formSectionDescription)}</p>
+          </div>
+          <form class="space-y-4 px-5 py-6 sm:px-8 sm:py-8" action="/thank-you" method="get">
+            <div>
+              <label class="mb-1.5 block text-sm font-medium text-slate-700">Name</label>
+              <input type="text" name="name" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="Your full name" />
+            </div>
+            <div>
+              <label class="mb-1.5 block text-sm font-medium text-slate-700">Email Address</label>
+              <input type="email" name="email" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="you@email.com" />
+            </div>
+            <div>
+              <label class="mb-1.5 block text-sm font-medium text-slate-700">WhatsApp Number</label>
+              <div class="flex flex-col gap-2 sm:flex-row">
+                <select name="country_code" class="min-h-12 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base sm:w-28 sm:text-sm"><option>+65</option><option>+60</option><option>+62</option><option>+63</option></select>
+                <input type="tel" name="phone" class="min-h-12 w-full flex-1 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="Phone number" />
+              </div>
+            </div>
+            <div>
+              <label class="mb-1.5 block text-sm font-medium text-slate-700">Job Position Preferred</label>
+              <select name="position" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base sm:text-sm">${jobs}</select>
+            </div>
+            <label class="flex items-start gap-3 text-sm leading-relaxed text-slate-600">
+              <input type="checkbox" name="consent" class="mt-1 h-4 w-4 shrink-0 rounded border-slate-300" />
+              ${esc(consentText)}
+            </label>
+            <div class="rounded-xl border border-dashed border-slate-200 bg-slate-50 px-4 py-5 text-center text-xs text-slate-500">reCAPTCHA placeholder</div>
+            <button type="submit" class="btn-primary w-full min-h-12 text-base">Submit Application</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -330,8 +358,8 @@ function buildIndex() {
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
         <div class="lg:w-[45%] lg:shrink-0">
-          <header class="max-w-3xl text-left"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Built for a simpler applicant journey</h2>
-          <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Matching Remote keeps the enquiry experience organized, practical, and transparent so applicants know what may happen before a hiring company begins its own review.</p></header>
+          <header class="max-w-3xl text-left"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Built for a simpler remote-job application journey</h2>
+          <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Browse Flex keeps the application journey organized, practical, and transparent so applicants can understand the role categories before a hiring company begins its own review.</p></header>
           <div class="relative mt-8 aspect-[16/10] w-full overflow-hidden rounded-2xl shadow-md sm:rounded-3xl">
             <img src="images/about.png" alt="Team collaborating in a modern office" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
           </div>
@@ -343,8 +371,8 @@ function buildIndex() {
 
   <section id="steps" class="bg-slate-50 py-16 sm:py-20 lg:py-28">
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">How the profile path works</h2>
-      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">Matching Remote explains the general path. Company-specific screening, role details, and hiring decisions remain with the third-party hiring company.</p></header>
+      <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">How the application process works</h2>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">Browse Flex provides an application pathway for current remote-friendly role categories. Company-specific screening, role details, and hiring decisions remain with the relevant hiring company.</p></header>
       <div class="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-900/5 sm:mt-10 sm:rounded-3xl lg:aspect-[21/9]">
         <img src="images/steps.png" alt="Singapore applicants reviewing remote work opportunities on laptops" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
       </div>
@@ -355,11 +383,11 @@ function buildIndex() {
 
   <section id="roles" class="bg-slate-50 py-16 sm:py-20 lg:py-28">
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      <header class="max-w-3xl lg:max-w-none"><h2 id="roles-heading" class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Remote-friendly categories <span class="whitespace-nowrap">at a glance</span></h2>
-      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">These examples help applicants understand the kinds of online work that may appear through third-party hiring companies. They are not a promise that every category is currently open.</p></header>
+      <header class="max-w-3xl lg:max-w-none"><h2 id="roles-heading" class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Current remote-friendly role categories</h2>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">These role categories are currently accepting applications from Singapore-based applicants. Final role availability, pay, schedule, screening, and hiring decisions are confirmed by the relevant hiring company.</p></header>
       <div class="mt-8 flex flex-col gap-4 rounded-2xl border border-brand-200/50 bg-brand-600 px-5 py-6 text-white sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <p class="text-sm leading-relaxed text-brand-50 sm:text-base">Keep your profile ready. Submit your interest once so your details are easier to reference when a relevant category appears.</p>
-        <a href="#hero-form" class="btn-outline mt-4 shrink-0 border-white/40 bg-white text-brand-700 sm:mt-0">Submit profile interest</a>
+        <p class="text-sm leading-relaxed text-brand-50 sm:text-base">Choose a role category that fits your background and submit your application online.</p>
+        <a href="#hero-form" class="btn-outline mt-4 shrink-0 border-white/40 bg-white text-brand-700 sm:mt-0">Apply Now</a>
       </div>
       <div class="mt-8 flex flex-col gap-6 sm:mt-10">${rolesHtml}</div>
     </div>
@@ -367,7 +395,7 @@ function buildIndex() {
 
   <section id="eligibility" class="bg-white py-16 sm:py-20 lg:py-28">
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Who can take part</h2>
+      <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Who can apply</h2>
       <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Before applying, review these general points. Individual roles may have additional criteria set by hiring companies.</p></header>
       <div class="mt-10 overflow-hidden rounded-2xl border border-slate-200/80 bg-white sm:mt-12 sm:rounded-3xl">${eligibilityHtml}</div>
     </div>
@@ -377,8 +405,8 @@ function buildIndex() {
   <section class="bg-white py-16 sm:py-20 lg:py-28">
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-5 lg:gap-12">
-        <header class="lg:col-span-2 max-w-3xl lg:max-w-none"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Know what to check before moving forward</h2>
-        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Remote roles can differ in schedule, tools, verification, and pay terms. Matching Remote keeps the guidance practical so you can review each opportunity carefully.</p></header>
+        <header class="lg:col-span-2 max-w-3xl lg:max-w-none"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Know what to check before accepting a role</h2>
+        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Remote roles can differ in schedule, tools, verification, and pay terms. Review each opportunity carefully before accepting any work arrangement.</p></header>
         <div class="mt-8 flex flex-col lg:col-span-3 lg:mt-0">${confidenceHtml}</div>
       </div>
     </div>
@@ -388,7 +416,7 @@ function buildIndex() {
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
         <header class="lg:w-[42%] lg:shrink-0"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-4xl">How compensation is usually confirmed</h2>
-        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Compensation structure is not universal. Depending on the company and work scope, it may be hourly, task-based, shift-based, or project-based.</p></header>
+        <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Compensation may differ depending on the company, role scope, schedule, skills, experience, and work arrangement. Pay may be hourly, task-based, shift-based, or project-based.</p></header>
         <aside class="w-full rounded-2xl border border-slate-200/80 border-l-4 border-l-brand-600 bg-white p-5 sm:p-8 lg:flex-1">
           <h3 class="font-serif text-xl font-semibold text-slate-900">When pay details are provided</h3>
           <ul class="mt-5 space-y-4">${compBullets}</ul>
@@ -402,7 +430,7 @@ function buildIndex() {
       <div class="relative mb-8 aspect-[16/7] w-full overflow-hidden rounded-2xl shadow-md sm:mb-10 sm:rounded-3xl">
         <img src="images/get-started.png" alt="Clean home workspace with laptop ready for remote work" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
       </div>
-      <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Before you submit your profile</h2>
+      <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Before you apply</h2>
       <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">These are practical basics that often matter for remote-friendly work. Individual opportunities may still include additional company requirements.</p></header>
       <div class="mt-8 space-y-3 sm:mt-10">${getStartedHtml}</div>
     </div>
@@ -411,8 +439,8 @@ function buildIndex() {
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-6 rounded-2xl border border-brand-200/40 bg-brand-50/50 px-5 py-8 sm:rounded-3xl sm:px-10 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
         <div class="max-w-2xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl">Questions before you apply?</h2>
-        <p class="mt-4 text-base leading-relaxed text-slate-600">For general questions about how Matching Remote works, contact support for platform-related questions. Hiring decisions remain with third-party companies.</p></div>
-        <p class="shrink-0 text-sm font-medium text-slate-800 lg:text-right">support@matchingremote.com</p>
+        <p class="mt-4 text-base leading-relaxed text-slate-600">For general questions about how ${esc(brandName)} works, contact support for platform-related questions. Hiring decisions remain with third-party hiring companies.</p></div>
+        <p class="shrink-0 text-sm font-medium text-slate-800 lg:text-right">${esc(brandSupportEmail)}</p>
       </div>
     </div>
   </section>
@@ -420,7 +448,7 @@ function buildIndex() {
 
   return pageShell(
     brandPageTitleSuffix,
-    "Flexible remote-work profile support for Singapore-based applicants exploring remote-friendly categories through third-party hiring companies.",
+    "Remote-friendly role application pathway for Singapore-based applicants exploring current role categories shared by hiring partners.",
     body,
     "index.html",
   );
@@ -492,7 +520,7 @@ function buildPrivacy() {
   </div>
 </main>`;
 
-  return pageShell(`${privacyPolicyMeta.title} | Matching Remote`, "How Matching Remote collects, uses, and protects personal data for Singapore-based applicants under the PDPA.", body, "privacy-policy.html");
+  return pageShell(`${privacyPolicyMeta.title} | ${esc(brandName)}`, `How ${esc(brandName)} collects, uses, and protects personal data for Singapore-based applicants under the PDPA.`, body, "privacy-policy.html");
 }
 
 function buildTerms() {
@@ -535,42 +563,38 @@ function buildTerms() {
   </div>
 </main>`;
 
-  return pageShell(`${termsOfUseMeta.title} | Matching Remote`, "Terms governing use of the Matching Remote website and profile-submission information pages.", body, "terms-of-use.html");
+  return pageShell(`${termsOfUseMeta.title} | ${esc(brandName)}`, `Terms governing use of the ${esc(brandName)} website and application information pages.`, body, "terms-of-use.html");
 }
 
 function buildThankYou() {
-  const steps = [
-    "Your details are received for profile review.",
-    "Your information may be compared with current or upcoming remote-friendly categories.",
-    "If a hiring company considers your profile relevant, it may contact you about next steps.",
-  ]
-    .map(
-      (s) =>
-        `<li class="flex gap-3 text-sm leading-relaxed text-slate-600 sm:text-base">${icon.check}<span>${esc(s)}</span></li>`,
-    )
-    .join("");
-
   const body = `<main class="bg-white pt-24 pb-16 sm:pt-28 sm:pb-20">
   <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-50 text-brand-700">${icon.check}</div>
-      <p class="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">MATCHING REMOTE - SINGAPORE</p>
-      <h1 class="mt-4 font-serif text-3xl font-semibold text-slate-900 sm:text-4xl">Thank you for your interest</h1>
-      <p class="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">Your profile submission has been received. Matching Remote will use your information for category review and may share relevant details with third-party hiring companies when appropriate. Hiring decisions remain with those companies.</p>
+      <p class="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">${esc(brandTagline)}</p>
+      <h1 class="mt-4 font-serif text-3xl font-semibold text-slate-900 sm:text-4xl">Thank you for your application</h1>
+      <p class="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">Your application has been received. ${esc(brandName)} may review your submitted details against current remote-friendly role categories shared by hiring partners.</p>
       <div class="mt-10 rounded-2xl border border-slate-200/80 bg-white p-6 text-left shadow-sm sm:p-8">
         <h2 class="font-serif text-lg font-semibold text-slate-900 sm:text-xl">What may happen next</h2>
-        <ul class="mt-4 space-y-3">${steps}</ul>
+        <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">If your application appears relevant to a suitable role category, you may be contacted about screening, role details, work arrangements, verification, or next steps. Company-specific hiring decisions remain with the relevant hiring company.</p>
+        <div class="mt-4 rounded-xl bg-slate-50 px-4 py-3">
+          <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Current role categories</p>
+          <p class="mt-1 text-sm text-slate-600">Current role categories may include remote admin support, customer support, online merchant support, e-commerce support, online sales support, and AI content support.</p>
+        </div>
       </div>
-      <p class="mt-8 text-sm leading-relaxed text-slate-600">Questions about your submission? <span class="font-medium text-slate-800">support@matchingremote.com</span></p>
+      <div class="mt-8 rounded-2xl border border-amber-200/60 bg-amber-50/60 px-5 py-4 text-sm leading-relaxed text-slate-600">
+        <span class="font-semibold text-slate-800">Important: </span>Submitting an application does not guarantee an interview, job offer, placement, or earnings. Please review any opportunity details carefully before accepting a role or sharing additional sensitive information.
+      </div>
+      <p class="mt-8 text-sm leading-relaxed text-slate-600">Questions about your submission? <span class="font-medium text-slate-800">${esc(brandSupportEmail)}</span></p>
       <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
         <a href="index.html" class="btn-primary w-full sm:w-auto">Back to Homepage</a>
-        <a href="index.html#steps" class="btn-outline w-full sm:w-auto">See the process</a>
+        <a href="index.html#roles" class="btn-outline w-full sm:w-auto">View Current Roles</a>
       </div>
     </div>
   </div>
 </main>`;
 
-  return pageShell("Thank You | Matching Remote", "Your Matching Remote profile interest has been received.", body, "thank-you.html");
+  return pageShell(`Thank You | ${esc(brandName)}`, `Your ${esc(brandName)} application has been received.`, body, "thank-you.html");
 }
 
 mkdirSync(join(outDir, "assets/css"), { recursive: true });

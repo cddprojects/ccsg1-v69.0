@@ -1,12 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { brandSupportEmail } from "@/lib/brand";
-
-const nextSteps = [
-  "Your details are received for profile review.",
-  "Your information may be compared with current or upcoming remote-friendly categories.",
-  "If a hiring company considers your profile relevant, it may contact you about next steps.",
-] as const;
+import { brandSupportEmail, brandTagline } from "@/lib/brand";
 
 export function ThankYouContent() {
   return (
@@ -16,30 +10,44 @@ export function ThankYouContent() {
       </div>
 
       <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
-        MATCHING REMOTE - SINGAPORE
+        {brandTagline}
       </p>
       <h1 className="mt-4 font-serif text-3xl font-semibold text-slate-900 sm:text-4xl">
-        Thank you for your interest
+        Thank you for your application
       </h1>
       <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
-        Your profile submission has been received. Matching Remote will use your
-        information for category review and may share relevant details with
-        third-party hiring companies when appropriate. Hiring decisions remain
-        with those companies.
+        Your application has been received. Browse Flex may review your submitted
+        details against current remote-friendly role categories shared by hiring
+        partners.
       </p>
 
       <div className="mt-10 rounded-2xl border border-slate-200/80 bg-white p-6 text-left shadow-sm sm:p-8">
         <h2 className="font-serif text-lg font-semibold text-slate-900 sm:text-xl">
           What may happen next
         </h2>
-        <ul className="mt-4 space-y-3">
-          {nextSteps.map((step) => (
-            <li key={step} className="flex gap-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
-              <span>{step}</span>
-            </li>
-          ))}
-        </ul>
+        <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+          If your application appears relevant to a suitable role category, you may be
+          contacted about screening, role details, work arrangements, verification, or
+          next steps. Company-specific hiring decisions remain with the relevant hiring
+          company.
+        </p>
+        <div className="mt-4 rounded-xl bg-slate-50 px-4 py-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            Current role categories
+          </p>
+          <p className="mt-1 text-sm text-slate-600">
+            Current role categories may include remote admin support, customer support,
+            online merchant support, e-commerce support, online sales support, and AI
+            content support.
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-8 rounded-2xl border border-amber-200/60 bg-amber-50/60 px-5 py-4 text-sm leading-relaxed text-slate-600">
+        <span className="font-semibold text-slate-800">Important: </span>
+        Submitting an application does not guarantee an interview, job offer, placement,
+        or earnings. Please review any opportunity details carefully before accepting a
+        role or sharing additional sensitive information.
       </div>
 
       <p className="mt-8 text-sm leading-relaxed text-slate-600">
@@ -51,8 +59,8 @@ export function ThankYouContent() {
         <Button href="/" className="w-full sm:w-auto">
           Back to Homepage
         </Button>
-        <Button href="/#steps" variant="outline" className="w-full sm:w-auto">
-          See the process
+        <Button href="/#roles" variant="outline" className="w-full sm:w-auto">
+          View Current Roles
         </Button>
       </div>
     </div>

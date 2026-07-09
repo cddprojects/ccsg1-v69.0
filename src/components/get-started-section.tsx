@@ -16,7 +16,7 @@ export function GetStartedSection() {
           sizes="100vw"
         />
         <SectionHeading
-          title="Before you submit your profile"
+          title="Before you apply"
           description="These are practical basics that often matter for remote-friendly work. Individual opportunities may still include additional company requirements."
         />
 

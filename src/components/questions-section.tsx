@@ -14,9 +14,9 @@ export function QuestionsSection() {
               Questions before you apply?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              For general questions about how Matching Remote works, contact support for
+              For general questions about how Browse Flex works, contact support for
               platform-related questions. Hiring decisions remain with third-party
-              companies.
+              hiring companies.
             </p>
           </div>
           <p className="shrink-0 text-sm font-medium text-slate-800 lg:text-right">
