@@ -183,7 +183,7 @@ export const roleCards = [
   {
     title: "AI Content Support Assistant",
     profileFit: "Good fit",
-    activeBadge: "Now Hiring",
+    activeBadge: "Active Opening",
     tags: ["AI tools", "Content checks", "Attention to detail"],
     place: "Flexible arrangement",
     hours: "Part-time",
