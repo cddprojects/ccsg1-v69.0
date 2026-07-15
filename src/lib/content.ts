@@ -33,7 +33,7 @@ export const jobPositions = [
   "Remote Admin Assistant",
   "Remote Customer Support Assistant",
   "Online Merchant Support Assistant",
-  "E-Commerce Support Assistant",
+  "Remote E-commerce Store Operations Assistant",
   "Online Sales Support Assistant",
   "AI Content Support Assistant",
 ] as const;
@@ -208,16 +208,16 @@ export const roleCards = [
     image: "/images/roles/role-operations.png",
   },
   {
-    title: "E-Commerce Support Assistant",
+    title: "Remote E-commerce Store Operations Assistant",
     profileFit: "Good fit",
-    tags: ["Online store", "Order checks", "Product updates"],
-    place: "Flexible arrangement",
+    tags: ["Product listing", "Order monitoring", "Store operations"],
+    place: "Remote / Flexible",
     hours: "Part-time",
     pay: "Indicative S$16–S$22/hr",
     description:
-      "Assist with online store support tasks such as updating product details, checking order information, organizing simple records, and following up on platform-related requests.",
+      "Support the daily operation of an e-commerce store, including product listing, order monitoring and basic store administration on platforms such as TikTok Shop.",
     supportingNote:
-      "Good fit for applicants who are comfortable using online tools, checking details carefully, and supporting e-commerce workflows.",
+      "Good fit for applicants who are comfortable using online platforms, following operational steps carefully, and supporting e-commerce workflows independently.",
     image: "/images/roles/role-marketing-content.png",
   },
   {
