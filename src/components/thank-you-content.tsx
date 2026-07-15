@@ -37,7 +37,7 @@ export function ThankYouContent() {
           </p>
           <p className="mt-1 text-sm text-slate-600">
             Current role categories may include remote admin support, customer support,
-            online merchant support, e-commerce support, online sales support, and AI
+            online merchant support, e-commerce store operations, online sales support, and AI
             content support.
           </p>
         </div>

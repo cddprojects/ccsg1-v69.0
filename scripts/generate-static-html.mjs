@@ -171,7 +171,7 @@ function footer(homeLink) {
 
 function buildIndex() {
   const heroText =
-    "Browse Flex helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce support, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company.";
+    "Browse Flex helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce store operations, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company.";
 
   const bullets = heroBullets
     .map(
@@ -582,7 +582,7 @@ function buildThankYou() {
         <p class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">If your application appears relevant to a suitable role category, you may be contacted about screening, role details, work arrangements, verification, or next steps. Company-specific hiring decisions remain with the relevant hiring company.</p>
         <div class="mt-4 rounded-xl bg-slate-50 px-4 py-3">
           <p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Current role categories</p>
-          <p class="mt-1 text-sm text-slate-600">Current role categories may include remote admin support, customer support, online merchant support, e-commerce support, online sales support, and AI content support.</p>
+          <p class="mt-1 text-sm text-slate-600">Current role categories may include remote admin support, customer support, online merchant support, e-commerce store operations, online sales support, and AI content support.</p>
         </div>
       </div>
       <div class="mt-8 rounded-2xl border border-amber-200/60 bg-amber-50/60 px-5 py-4 text-sm leading-relaxed text-slate-600">

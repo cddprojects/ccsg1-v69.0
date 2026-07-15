@@ -18,7 +18,7 @@ export const privacyPolicySections = [
       },
       {
         type: "paragraph" as const,
-        text: "The platform focuses on remote-friendly role categories such as remote admin support, customer support, online merchant support, e-commerce support, online sales support, and AI content support. We may provide general process information and application support, but company-specific screening, role details, compensation, verification, work arrangements, onboarding, and hiring decisions remain with the relevant third-party hiring company.",
+        text: "The platform focuses on remote-friendly role categories such as remote admin support, customer support, online merchant support, e-commerce store operations, online sales support, and AI content support. We may provide general process information and application support, but company-specific screening, role details, compensation, verification, work arrangements, onboarding, and hiring decisions remain with the relevant third-party hiring company.",
       },
       {
         type: "paragraph" as const,
@@ -49,7 +49,7 @@ export const privacyPolicySections = [
         items: [
           "Identity and contact details — such as your name, email address, phone number, and other contact information.",
           "Application information — such as availability, preferred role category, work preferences, skills summary, background information, experience, remote-work readiness, work eligibility, and information you choose to submit.",
-          "Role review information — such as notes or indicators relating to your potential suitability for remote-friendly role categories including remote admin support, customer support, online merchant support, e-commerce support, online sales support, and AI content support.",
+          "Role review information — such as notes or indicators relating to your potential suitability for remote-friendly role categories including remote admin support, customer support, online merchant support, e-commerce store operations, online sales support, and AI content support.",
           "Technical and usage data — such as IP address, browser type, device information, pages viewed, approximate location derived from IP address, cookies, pixels, or similar technologies where applicable.",
           "Communications — such as the content of emails, messages, enquiries, or support requests you send to us.",
         ],

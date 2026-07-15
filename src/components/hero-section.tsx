@@ -45,7 +45,7 @@ export function HeroSection() {
               </h1>
               <ReadMore
                 className="mt-5"
-                text="Browse Flex helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce support, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company."
+                text="Browse Flex helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce store operations, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company."
                 collapsedLines={4}
                 fullFrom="lg"
               />

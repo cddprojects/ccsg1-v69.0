@@ -11,7 +11,7 @@ export const termsOfUseSections = [
   {
     id: "platform-role",
     title: "Platform role",
-    text: "Browse Flex provides general information and an online application pathway for individuals exploring remote-friendly role categories shared by third-party hiring companies. Current role categories may include remote admin support, customer support, online merchant support, e-commerce support, online sales support, and AI content support. Browse Flex is generally not the employer, recruiter, payroll provider, or hiring decision maker unless expressly stated.",
+    text: "Browse Flex provides general information and an online application pathway for individuals exploring remote-friendly role categories shared by third-party hiring companies. Current role categories may include remote admin support, customer support, online merchant support, e-commerce store operations, online sales support, and AI content support. Browse Flex is generally not the employer, recruiter, payroll provider, or hiring decision maker unless expressly stated.",
   },
   {
     id: "no-guarantee",

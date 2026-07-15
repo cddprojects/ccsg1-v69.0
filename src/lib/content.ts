@@ -55,7 +55,7 @@ export const aboutCards = [
     id: "C",
     title: "Remote-friendly roles",
     description:
-      "Explore current online work categories including admin support, customer support, merchant support, e-commerce support, online sales support, and AI content support.",
+      "Explore current online work categories including admin support, customer support, merchant support, e-commerce store operations, online sales support, and AI content support.",
   },
 ] as const;
 
