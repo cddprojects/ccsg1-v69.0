@@ -181,6 +181,20 @@ export const roleCards = [
     image: "/images/roles/role-customer-support.png",
   },
   {
+    title: "Remote E-commerce Store Operations Assistant",
+    profileFit: "Good fit",
+    activeBadge: "Active Opening",
+    tags: ["Product listing", "Order monitoring", "Store operations"],
+    place: "Remote / Flexible",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
+    description:
+      "Support the daily operation of an e-commerce store, including product listing, order monitoring and basic store administration on platforms such as TikTok Shop.",
+    supportingNote:
+      "Good fit for applicants who are comfortable using online platforms, following operational steps carefully, and supporting e-commerce workflows independently.",
+    image: "/images/roles/role-marketing-content.png",
+  },
+  {
     title: "AI Content Support Assistant",
     profileFit: "Good fit",
     activeBadge: "Active Opening",
@@ -206,19 +220,6 @@ export const roleCards = [
     supportingNote:
       "Good fit for applicants who are comfortable using online platforms and following clear step-by-step instructions.",
     image: "/images/roles/role-operations.png",
-  },
-  {
-    title: "Remote E-commerce Store Operations Assistant",
-    profileFit: "Good fit",
-    tags: ["Product listing", "Order monitoring", "Store operations"],
-    place: "Remote / Flexible",
-    hours: "Part-time",
-    pay: "Indicative S$16–S$22/hr",
-    description:
-      "Support the daily operation of an e-commerce store, including product listing, order monitoring and basic store administration on platforms such as TikTok Shop.",
-    supportingNote:
-      "Good fit for applicants who are comfortable using online platforms, following operational steps carefully, and supporting e-commerce workflows independently.",
-    image: "/images/roles/role-marketing-content.png",
   },
   {
     title: "Online Sales Support Assistant",
