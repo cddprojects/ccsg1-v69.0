@@ -13,7 +13,7 @@ export function AboutSection() {
           <div className="lg:w-[45%] lg:shrink-0">
             <SectionHeading
               title="Built for a simpler remote-job application journey"
-              description="Browse Flex keeps the application journey organized, practical, and transparent so applicants can understand the role categories before a hiring company begins its own review."
+              description="Unitel Match keeps the application journey organized, practical, and transparent so applicants can understand the role categories before a hiring company begins its own review."
             />
             <SectionImage
               src={siteImages.about}

@@ -1,11 +1,11 @@
 export const privacyPolicyMeta = {
   title: "Privacy Policy",
   lastUpdated: "6 May 2026",
-  brand: "Browse Flex",
+  brand: "Unitel Match",
 } as const;
 
 export const privacyPolicyIntro =
-  'This Privacy Policy describes how Browse Flex ("we", "us", "our") collects, uses, discloses, and protects personal data when you use our website, application forms, applicant enquiry services, and related application support services at www.browseflex.com, where applicable (the "Services"). It is intended to align with the Personal Data Protection Act 2012 of Singapore ("PDPA"). This Policy does not constitute legal advice.';
+  'This Privacy Policy describes how Unitel Match ("we", "us", "our") collects, uses, discloses, and protects personal data when you use our website, application forms, applicant enquiry services, and related application support services at www.unitelmatch.com, where applicable (the "Services"). It is intended to align with the Personal Data Protection Act 2012 of Singapore ("PDPA"). This Policy does not constitute legal advice.';
 
 export const privacyPolicySections = [
   {
@@ -14,7 +14,7 @@ export const privacyPolicySections = [
     blocks: [
       {
         type: "paragraph" as const,
-        text: "Browse Flex provides an online application pathway for Singapore-based applicants exploring current remote-friendly role categories shared by third-party hiring companies.",
+        text: "Unitel Match provides an online application pathway for Singapore-based applicants exploring current remote-friendly role categories shared by third-party hiring companies.",
       },
       {
         type: "paragraph" as const,
@@ -22,15 +22,15 @@ export const privacyPolicySections = [
       },
       {
         type: "paragraph" as const,
-        text: "Browse Flex is generally not your employer and does not guarantee interviews, job offers, placement, earnings, or role availability unless expressly stated in writing.",
+        text: "Unitel Match is generally not your employer and does not guarantee interviews, job offers, placement, earnings, or role availability unless expressly stated in writing.",
       },
       {
         type: "contact" as const,
         lines: [
-          { label: "Contact", value: "support@browseflex.com" },
+          { label: "Contact", value: "support@unitelmatch.com" },
           {
             label: "Business correspondence",
-            value: "Ang Mo Kio Avenue 3, 569933, Ang Mo Kio, Singapore",
+            value: "Haw Par Centre, 180 Clemenceau Avenue, #05-01, Singapore 239922",
           },
         ],
       },
@@ -89,7 +89,7 @@ export const privacyPolicySections = [
     blocks: [
       {
         type: "paragraph" as const,
-        text: "Browse Flex may share relevant application or applicant information with third-party hiring companies where your application appears relevant to a current remote-friendly role category or opportunity.",
+        text: "Unitel Match may share relevant application or applicant information with third-party hiring companies where your application appears relevant to a current remote-friendly role category or opportunity.",
       },
       {
         type: "paragraph" as const,
@@ -181,8 +181,8 @@ export const privacyPolicySections = [
       },
       {
         type: "paragraph" as const,
-        text: "To exercise these rights or raise a concern, contact us at support@browseflex.com. We may need to verify your identity before responding.",
-        email: "support@browseflex.com",
+        text: "To exercise these rights or raise a concern, contact us at support@unitelmatch.com. We may need to verify your identity before responding.",
+        email: "support@unitelmatch.com",
       },
     ],
   },

@@ -99,7 +99,7 @@ export const confidenceItems = [
   {
     title: "General enquiries",
     description:
-      "Contact Browse Flex for platform-related questions. Hiring decisions remain with the relevant hiring company.",
+      "Contact Unitel Match for platform-related questions. Hiring decisions remain with the relevant hiring company.",
   },
 ] as const;
 
@@ -239,4 +239,4 @@ export const roleCards = [
 export const footerQuickLinks = navLinks;
 
 export const consentText =
-  "By submitting this form, you agree that Browse Flex may collect, use, and disclose your submitted details for application review, communication, and role consideration with relevant hiring partners, in accordance with our Privacy Policy.";
+  "By submitting this form, you agree that Unitel Match may collect, use, and disclose your submitted details for application review, communication, and role consideration with relevant hiring partners, in accordance with our Privacy Policy.";

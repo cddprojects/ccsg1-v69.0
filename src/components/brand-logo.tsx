@@ -23,6 +23,7 @@ export function BrandLogo({ size = "sm", className = "" }: BrandLogoProps) {
         height={img}
         className="h-full w-full object-contain"
         priority
+        unoptimized
       />
     </span>
   );

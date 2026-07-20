@@ -18,7 +18,7 @@ export function StepsSection() {
       <MotionSection>
         <SectionHeading
           title="How the application process works"
-          description="Browse Flex provides an application pathway for current remote-friendly role categories. Company-specific screening, role details, and hiring decisions remain with the relevant hiring company."
+          description="Unitel Match provides an application pathway for current remote-friendly role categories. Company-specific screening, role details, and hiring decisions remain with the relevant hiring company."
         />
 
         <SectionImage

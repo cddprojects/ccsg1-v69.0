@@ -16,7 +16,7 @@ export function ThankYouContent() {
         Thank you for your application
       </h1>
       <p className="mt-5 text-base leading-relaxed text-slate-600 sm:text-lg">
-        Your application has been received. Browse Flex may review your submitted
+        Your application has been received. Unitel Match may review your submitted
         details against current remote-friendly role categories shared by hiring
         partners.
       </p>

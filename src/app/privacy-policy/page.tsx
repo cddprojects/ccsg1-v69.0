@@ -4,9 +4,9 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Browse Flex",
+  title: "Privacy Policy | Unitel Match",
   description:
-    "How Browse Flex collects, uses, and protects personal data for Singapore-based applicants under the PDPA.",
+    "How Unitel Match collects, uses, and protects personal data for Singapore-based applicants under the PDPA.",
 };
 
 export default function PrivacyPolicyPage() {

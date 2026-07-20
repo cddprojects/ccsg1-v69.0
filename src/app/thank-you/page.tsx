@@ -4,9 +4,9 @@ import { SiteHeader } from "@/components/site-header";
 import { ThankYouContent } from "@/components/thank-you-content";
 
 export const metadata: Metadata = {
-  title: "Thank You | Browse Flex",
+  title: "Thank You | Unitel Match",
   description:
-    "Your Browse Flex application has been received. Learn what may happen next.",
+    "Your Unitel Match application has been received. Learn what may happen next.",
   robots: { index: false, follow: true },
 };
 

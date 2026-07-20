@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   title: brandPageTitleSuffix,
   description:
     "Flexible remote-work profile support for Singapore-based applicants exploring remote-friendly categories through third-party hiring companies.",
+  icons: {
+    icon: [{ url: "/logo.png?v=2", type: "image/png" }],
+    apple: [{ url: "/logo.png?v=2", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({

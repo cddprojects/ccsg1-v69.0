@@ -57,7 +57,7 @@ function pageShell(title, description, body, homeLink = "index.html") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}" />
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="logo.png?v=2" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
@@ -157,13 +157,13 @@ function footer(homeLink) {
         <div>
           <p class="text-sm font-semibold text-white">Support</p>
           <p class="mt-3 text-sm text-brand-200">${esc(brandSupportEmail)}</p>
-          <p class="mt-3 text-sm leading-relaxed text-slate-400"><span class="block font-medium text-slate-300">Business Correspondence Address</span>Ang Mo Kio Avenue 3, 569933, Ang Mo Kio</p>
+          <p class="mt-3 text-sm leading-relaxed text-slate-400"><span class="block font-medium text-slate-300">Business Correspondence Address</span>Haw Par Centre, 180 Clemenceau Avenue, #05-01, Singapore 239922</p>
         </div>
       </div>
     </div>
     <div class="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
       <p>&copy; ${new Date().getFullYear()} ${esc(brandName)}. All rights reserved.</p>
-      <a href="${indexPrefix}" class="inline-block py-2 hover:text-slate-300">Back to top</a>
+      <a href="#top" class="inline-block py-2 hover:text-slate-300" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top</a>
     </div>
   </div>
 </footer>`;
@@ -171,7 +171,7 @@ function footer(homeLink) {
 
 function buildIndex() {
   const heroText =
-    "Browse Flex helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce store operations, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company.";
+    "Unitel Match helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce store operations, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company.";
 
   const bullets = heroBullets
     .map(
@@ -362,7 +362,7 @@ function buildIndex() {
       <div class="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
         <div class="lg:w-[45%] lg:shrink-0">
           <header class="max-w-3xl text-left"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Built for a simpler remote-job application journey</h2>
-          <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Browse Flex keeps the application journey organized, practical, and transparent so applicants can understand the role categories before a hiring company begins its own review.</p></header>
+          <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Unitel Match keeps the application journey organized, practical, and transparent so applicants can understand the role categories before a hiring company begins its own review.</p></header>
           <div class="relative mt-8 aspect-[16/10] w-full overflow-hidden rounded-2xl shadow-md sm:rounded-3xl">
             <img src="images/about.png" alt="Team collaborating in a modern office" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
           </div>
@@ -375,7 +375,7 @@ function buildIndex() {
   <section id="steps" class="bg-slate-50 py-16 sm:py-20 lg:py-28">
     <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
       <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">How the application process works</h2>
-      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">Browse Flex provides an application pathway for current remote-friendly role categories. Company-specific screening, role details, and hiring decisions remain with the relevant hiring company.</p></header>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">Unitel Match provides an application pathway for current remote-friendly role categories. Company-specific screening, role details, and hiring decisions remain with the relevant hiring company.</p></header>
       <div class="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-2xl shadow-md ring-1 ring-slate-900/5 sm:mt-10 sm:rounded-3xl lg:aspect-[21/9]">
         <img src="images/steps.png" alt="Singapore applicants reviewing remote work opportunities on laptops" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
       </div>

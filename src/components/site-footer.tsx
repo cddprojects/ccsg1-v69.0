@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { BrandLogo } from "@/components/brand-logo";
 import { brandName, brandSupportEmail } from "@/lib/brand";
@@ -67,7 +69,7 @@ export function SiteFooter() {
                 <span className="block font-medium text-slate-300">
                   Business Correspondence Address
                 </span>
-                Ang Mo Kio Avenue 3, 569933, Ang Mo Kio
+                Haw Par Centre, 180 Clemenceau Avenue, #05-01, Singapore 239922
               </p>
             </div>
           </div>
@@ -77,9 +79,13 @@ export function SiteFooter() {
           <p>
             © {new Date().getFullYear()} {brandName}. All rights reserved.
           </p>
-          <a href="#" className="inline-block py-2 hover:text-slate-300">
+          <button
+            type="button"
+            className="inline-block py-2 text-left hover:text-slate-300"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             Back to top
-          </a>
+          </button>
         </div>
       </div>
     </footer>

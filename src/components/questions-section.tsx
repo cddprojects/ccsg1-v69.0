@@ -14,7 +14,7 @@ export function QuestionsSection() {
               Questions before you apply?
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              For general questions about how Browse Flex works, contact support for
+              For general questions about how Unitel Match works, contact support for
               platform-related questions. Hiring decisions remain with third-party
               hiring companies.
             </p>

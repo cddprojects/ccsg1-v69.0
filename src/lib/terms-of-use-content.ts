@@ -1,17 +1,17 @@
 export const termsOfUseMeta = {
   title: "Terms of Use",
   lastUpdated: "May 12, 2026",
-  brand: "Browse Flex",
+  brand: "Unitel Match",
 } as const;
 
 export const termsOfUseIntro =
-  "These terms describe the general use of the Browse Flex website, application forms, role-category information pages, and related applicant support services.";
+  "These terms describe the general use of the Unitel Match website, application forms, role-category information pages, and related applicant support services.";
 
 export const termsOfUseSections = [
   {
     id: "platform-role",
     title: "Platform role",
-    text: "Browse Flex provides general information and an online application pathway for individuals exploring remote-friendly role categories shared by third-party hiring companies. Current role categories may include remote admin support, customer support, online merchant support, e-commerce store operations, online sales support, and AI content support. Browse Flex is generally not the employer, recruiter, payroll provider, or hiring decision maker unless expressly stated.",
+    text: "Unitel Match provides general information and an online application pathway for individuals exploring remote-friendly role categories shared by third-party hiring companies. Current role categories may include remote admin support, customer support, online merchant support, e-commerce store operations, online sales support, and AI content support. Unitel Match is generally not the employer, recruiter, payroll provider, or hiring decision maker unless expressly stated.",
   },
   {
     id: "no-guarantee",
@@ -36,7 +36,7 @@ export const termsOfUseSections = [
   {
     id: "contact",
     title: "Contact",
-    text: "For questions, contact support@browseflex.com.",
-    email: "support@browseflex.com",
+    text: "For questions, contact support@unitelmatch.com.",
+    email: "support@unitelmatch.com",
   },
 ] as const;
