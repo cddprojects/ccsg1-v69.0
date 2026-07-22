@@ -291,7 +291,7 @@ function buildIndex() {
           </div>
           <div class="flex min-w-0 flex-1 flex-col">
             <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">${esc(brandTagline)}</p>
-            <h1 class="mt-4 font-serif text-[1.875rem] font-semibold leading-snug text-slate-900 sm:text-4xl lg:text-[2.75rem]">Apply for remote-friendly part-time roles in Singapore</h1>
+            <h1 class="mt-4 font-serif text-[1.875rem] font-semibold leading-normal text-slate-900 sm:text-4xl lg:text-[2.75rem]">Apply for remote-friendly part-time roles in Singapore</h1>
             <p class="mt-5 text-base leading-relaxed text-slate-600">Explore opportunities across customer support, administration, digital support and more. Submit your details to be considered for suitable roles.</p>
             <ul class="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">${bullets}</ul>
             <div class="mt-6 flex w-full flex-col gap-3 sm:flex-row">
