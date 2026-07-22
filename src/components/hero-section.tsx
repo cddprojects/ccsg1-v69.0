@@ -6,7 +6,6 @@ import {
 } from "@/lib/content";
 import { brandTagline } from "@/lib/brand";
 import { Button } from "@/components/ui/button";
-import { ReadMore } from "@/components/ui/read-more";
 import { SectionImage } from "@/components/ui/section-image";
 
 export function HeroSection() {
@@ -34,12 +33,9 @@ export function HeroSection() {
               <h1 className="mt-4 font-serif text-[1.875rem] font-semibold text-slate-900 sm:text-4xl lg:text-[2.75rem]">
                 Apply for remote-friendly part-time roles in Singapore
               </h1>
-              <ReadMore
-                className="mt-5"
-                text="Unitel Match helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce store operations, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company."
-                collapsedLines={4}
-                fullFrom="lg"
-              />
+              <p className="mt-5 text-base leading-relaxed text-slate-600">
+                Explore opportunities across customer support, administration, digital support and more. Submit your details to be considered for suitable roles.
+              </p>
 
               <ul className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">
                 {heroBullets.map((item) => (
@@ -54,11 +50,11 @@ export function HeroSection() {
               </ul>
 
               <div className="mt-6 flex w-full flex-col gap-3 sm:flex-row">
+                <Button href="#roles" variant="outline" className="w-full sm:w-auto">
+                  View Role Categories
+                </Button>
                 <Button href="#hero-form" className="w-full sm:w-auto">
                   Apply Now
-                </Button>
-                <Button href="#roles" variant="outline" className="w-full sm:w-auto">
-                  View Current Roles
                 </Button>
               </div>
             </div>
