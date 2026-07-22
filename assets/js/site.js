@@ -53,4 +53,19 @@
       window.location.href = "/thank-you";
     });
   }
+
+  // Re-scroll when clicking the same hash (browser otherwise ignores it)
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+      if (!href || href.length < 2) return;
+      const el = document.getElementById(href.slice(1));
+      if (!el) return;
+      e.preventDefault();
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (window.location.hash !== href) {
+        history.pushState(null, "", href);
+      }
+    });
+  });
 })();

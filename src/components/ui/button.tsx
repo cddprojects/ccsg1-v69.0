@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import type { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 
 type ButtonProps = {
   href?: string;
@@ -21,6 +23,18 @@ const variants = {
   ghost: "text-slate-700 hover:bg-slate-100",
 };
 
+function scrollToHash(href: string, event?: MouseEvent<HTMLAnchorElement>) {
+  if (!href.startsWith("#") || href.length < 2) return false;
+  const el = document.getElementById(href.slice(1));
+  if (!el) return false;
+  event?.preventDefault();
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (window.location.hash !== href) {
+    history.pushState(null, "", href);
+  }
+  return true;
+}
+
 export function Button({
   href,
   variant = "primary",
@@ -33,7 +47,14 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link
+        href={href}
+        className={classes}
+        onClick={(event) => {
+          onClick?.();
+          scrollToHash(href, event);
+        }}
+      >
         {children}
       </Link>
     );

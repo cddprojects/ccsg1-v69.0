@@ -108,6 +108,15 @@ export function StepsSection() {
           <Link
             href="#hero-form"
             className="text-sm font-medium text-brand-700 underline underline-offset-4 hover:text-brand-800"
+            onClick={(event) => {
+              const el = document.getElementById("hero-form");
+              if (!el) return;
+              event.preventDefault();
+              el.scrollIntoView({ behavior: "smooth", block: "start" });
+              if (window.location.hash !== "#hero-form") {
+                history.pushState(null, "", "#hero-form");
+              }
+            }}
           >
             Apply Now
           </Link>
