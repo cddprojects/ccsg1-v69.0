@@ -60,8 +60,8 @@ export function ThankYouContent() {
           Back to Homepage
         </Button>
         <Button href="/#roles" variant="outline" className="w-full sm:w-auto">
-          View Current Roles
-        </Button>
+            View Role Categories
+          </Button>
       </div>
     </div>
   );

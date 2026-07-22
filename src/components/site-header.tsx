@@ -37,7 +37,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <Button href="#hero-form" className="px-4 py-2 text-sm" onClick={() => setOpen(false)}>
+          <Button href="#hero-form" className="h-10 min-h-0 px-4 py-0 text-sm" onClick={() => setOpen(false)}>
             Apply Now
           </Button>
           <button
