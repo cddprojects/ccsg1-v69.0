@@ -140,3 +140,20 @@ h3 {
 .rotate-180 {
   transform: rotate(180deg);
 }
+
+/* CDD / chatfromforms embed — height is set by postMessage (setIFrameHeight) */
+[data-cddform] {
+  width: 100%;
+  min-width: 0;
+}
+
+[data-cddform] iframe,
+#QBWpFormIFrame_1 {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  border: 0;
+  /* Small fallback only until the embed reports its real content height */
+  min-height: 200px;
+  transition: height 0.15s ease-out;
+}

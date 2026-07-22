@@ -68,4 +68,20 @@
       }
     });
   });
+
+  // Apply content-driven height from the CDD embed (setIFrameHeight)
+  const formDomain = "https://staging.chatfromforms.com";
+  window.addEventListener("message", (e) => {
+    if (e.origin !== formDomain) return;
+    const payload = e.data;
+    if (!payload || payload.type !== "setIFrameHeight") return;
+    const height = payload.data && payload.data.height;
+    if (typeof height !== "number" || height <= 0) return;
+    const iframe =
+      document.getElementById("QBWpFormIFrame_1") ||
+      document.querySelector("[data-cddform] iframe");
+    if (!iframe) return;
+    iframe.style.height = `${height + 5}px`;
+    iframe.style.minHeight = "0";
+  });
 })();
