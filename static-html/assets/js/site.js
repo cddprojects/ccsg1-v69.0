@@ -69,8 +69,10 @@
     });
   });
 
-  // Apply content-driven height from the CDD embed (setIFrameHeight)
+  // Apply content-driven height from the CDD embed (setIFrameHeight).
+  // Keep a small buffer; form-side padding should cover button box-shadow.
   const formDomain = "https://staging.chatfromforms.com";
+  const FORM_HEIGHT_BUFFER = 5;
   window.addEventListener("message", (e) => {
     if (e.origin !== formDomain) return;
     const payload = e.data;
@@ -81,7 +83,7 @@
       document.getElementById("QBWpFormIFrame_1") ||
       document.querySelector("[data-cddform] iframe");
     if (!iframe) return;
-    iframe.style.height = `${height + 5}px`;
+    iframe.style.height = `${height + FORM_HEIGHT_BUFFER}px`;
     iframe.style.minHeight = "0";
   });
 })();

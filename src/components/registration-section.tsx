@@ -32,7 +32,7 @@ export function RegistrationSection() {
               </p>
             </div>
 
-            <div className="px-5 py-6 sm:px-8 sm:py-8">
+            <div className="p-0">
               <div
                 ref={mountRef}
                 id="cdd-form-mount"
