@@ -3,6 +3,7 @@
 import { ArrowRight, ClipboardCheck, Send, type LucideIcon } from "lucide-react";
 import { stepsCards, siteImages } from "@/lib/content";
 import { MotionItem, MotionSection, MotionStagger } from "@/components/motion-section";
+import { Button } from "@/components/ui/button";
 import { SectionHeading, SectionShell } from "@/components/ui/section-shell";
 import { SectionImage } from "@/components/ui/section-image";
 
@@ -99,6 +100,15 @@ export function StepsSection() {
             })}
           </div>
         </MotionStagger>
+
+        <div className="mt-10 flex flex-col items-center gap-3 text-center sm:mt-12">
+          <p className="text-sm text-slate-500">
+            Ready to submit your application?
+          </p>
+          <Button href="#hero-form" variant="outline" className="px-6">
+            Apply Now
+          </Button>
+        </div>
       </MotionSection>
     </SectionShell>
   );

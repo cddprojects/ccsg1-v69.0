@@ -36,15 +36,20 @@ export function SiteHeader() {
           </Button>
         </nav>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <Button href="#hero-form" className="px-4 py-2 text-sm" onClick={() => setOpen(false)}>
+            Apply Now
+          </Button>
+          <button
+            type="button"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open ? (
@@ -62,9 +67,6 @@ export function SiteHeader() {
               </li>
             ))}
           </ul>
-          <Button href="#hero-form" className="mt-3 w-full min-h-12" onClick={() => setOpen(false)}>
-            Apply Now
-          </Button>
         </nav>
       ) : null}
     </header>
