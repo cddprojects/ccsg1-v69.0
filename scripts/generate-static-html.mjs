@@ -107,7 +107,10 @@ function header(homeLink) {
       <a href="${indexPrefix}#eligibility" class="text-sm text-slate-600 hover:text-brand-700">Eligibility</a>
       <a href="${indexPrefix}#hero-form" class="btn-primary px-5 py-2.5 text-sm">Apply Now</a>
     </nav>
-    <button id="menu-btn" type="button" class="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 lg:hidden" aria-expanded="false" aria-label="Toggle menu">${icon.menu}</button>
+    <div class="flex items-center gap-2 lg:hidden">
+      <a href="${indexPrefix}#hero-form" class="btn-primary h-10 min-h-0 px-4 py-0 text-sm">Apply Now</a>
+      <button id="menu-btn" type="button" class="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700" aria-expanded="false" aria-label="Toggle menu">${icon.menu}</button>
+    </div>
   </div>
   <nav id="mobile-nav" class="border-t border-slate-200 bg-white px-4 py-4 lg:hidden">
     <ul class="flex flex-col gap-1">
@@ -116,7 +119,6 @@ function header(homeLink) {
       <li><a href="${indexPrefix}#roles" class="block rounded-lg px-3 py-3 text-base text-slate-700">Roles</a></li>
       <li><a href="${indexPrefix}#eligibility" class="block rounded-lg px-3 py-3 text-base text-slate-700">Eligibility</a></li>
     </ul>
-    <a href="${indexPrefix}#hero-form" class="btn-primary mt-3 block w-full text-center">Apply Now</a>
   </nav>
 </header>`;
 }
@@ -170,9 +172,6 @@ function footer(homeLink) {
 }
 
 function buildIndex() {
-  const heroText =
-    "Unitel Match helps Singapore-based applicants apply for active remote-friendly role categories shared by hiring partners. Current role categories include remote admin support, customer support, merchant support, e-commerce store operations, online sales support, and AI content support. Role availability, responsibilities, pay, screening, and final hiring decisions are confirmed by the relevant hiring company.";
-
   const bullets = heroBullets
     .map(
       (b) =>
@@ -250,24 +249,18 @@ function buildIndex() {
         : "";
       const profileFitBadge = `<span class="rounded-md bg-brand-50 px-2.5 py-1 text-xs font-medium text-brand-700">${esc(role.profileFit)}</span>`;
       const tags = role.tags.map((t) => `<span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">${esc(t)}</span>`).join("");
-      const img = role.image.replace(/^\//, "");
-      return `<article class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm sm:rounded-3xl">
-        <div class="flex flex-col sm:flex-row">
-          <div class="relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-slate-100 sm:aspect-auto sm:h-full sm:min-h-[220px] sm:w-72">
-            <img src="${img}" alt="${esc(role.title)}" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-          </div>
-          <div class="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
-            <div class="flex flex-wrap items-center gap-2">${activeBadgeHtml}${profileFitBadge}${tags}</div>
-            <h3 class="mt-3 font-serif text-lg font-semibold leading-snug text-slate-900 sm:text-xl">${esc(role.title)}</h3>
-            <ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
-              <li class="inline-flex items-center gap-1">${icon.map}${esc(role.place)}</li>
-              <li class="inline-flex items-center gap-1">${icon.clock}${esc(role.hours)}</li>
-              <li class="inline-flex items-center gap-1">${icon.wallet}${esc(role.pay)}</li>
-            </ul>
-            <p class="mt-3 line-clamp-2 text-sm leading-relaxed text-slate-600 sm:line-clamp-none sm:text-base">${esc(role.description)}</p>
-            <div class="mt-3 rounded-xl bg-slate-50 px-4 py-3"><p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Supporting note</p><p class="mt-1 line-clamp-2 text-sm text-slate-600 sm:line-clamp-none">${esc(role.supportingNote)}</p></div>
-            <a href="#hero-form" class="btn-primary mt-4 w-full text-center sm:mt-5">Apply for this role</a>
-          </div>
+      return `<article class="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm sm:rounded-3xl">
+        <div class="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
+          <div class="flex flex-wrap items-center gap-2">${activeBadgeHtml}${profileFitBadge}${tags}</div>
+          <h3 class="mt-3 font-serif text-lg font-semibold leading-snug text-slate-900 sm:text-xl">${esc(role.title)}</h3>
+          <ul class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
+            <li class="inline-flex items-center gap-1">${icon.map}${esc(role.place)}</li>
+            <li class="inline-flex items-center gap-1">${icon.clock}${esc(role.hours)}</li>
+            <li class="inline-flex items-center gap-1">${icon.wallet}${esc(role.pay)}</li>
+          </ul>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">${esc(role.description)}</p>
+          <div class="mt-3 rounded-xl bg-slate-50 px-4 py-3"><p class="text-xs font-semibold uppercase tracking-wide text-slate-500">Supporting note</p><p class="mt-1 text-sm text-slate-600">${esc(role.supportingNote)}</p></div>
+          <a href="#hero-form" class="btn-primary mt-auto w-full pt-4 text-center sm:pt-5">Apply for this role</a>
         </div>
       </article>`;
     })
@@ -300,17 +293,11 @@ function buildIndex() {
           <div class="flex min-w-0 flex-1 flex-col">
             <p class="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">${esc(brandTagline)}</p>
             <h1 class="mt-4 font-serif text-[1.875rem] font-semibold text-slate-900 sm:text-4xl lg:text-[2.75rem]">Apply for remote-friendly part-time roles in Singapore</h1>
-            <div class="mt-5">
-              <p id="read-more-text" class="read-more-clamped text-base leading-relaxed text-slate-600 sm:text-lg">${esc(heroText)}</p>
-              <button id="read-more-btn" type="button" class="read-more-toggle mt-3 inline-flex items-center gap-1 text-sm font-medium text-brand-700 sm:hidden" aria-expanded="false">
-                <span class="read-more-label">Read full overview</span>
-                <span class="read-more-icon inline-flex transition-transform">${icon.chevron}</span>
-              </button>
-            </div>
+            <p class="mt-5 text-base leading-relaxed text-slate-600">Explore opportunities across customer support, administration, digital support and more. Submit your details to be considered for suitable roles.</p>
             <ul class="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2">${bullets}</ul>
             <div class="mt-6 flex w-full flex-col gap-3 sm:flex-row">
+              <a href="#roles" class="btn-outline w-full text-center sm:w-auto">View Role Categories</a>
               <a href="#hero-form" class="btn-primary w-full text-center sm:w-auto">Apply Now</a>
-              <a href="#roles" class="btn-outline w-full text-center sm:w-auto">View Current Roles</a>
             </div>
           </div>
         </div>
@@ -319,41 +306,18 @@ function buildIndex() {
           <dl class="min-w-0 flex-1 grid grid-cols-3 gap-3 border-t border-slate-200/80 pt-6 lg:mt-0 lg:pt-8">${stats}</dl>
         </div>
       </div>
-      <div id="hero-form" class="mt-12 lg:mt-14">
-        <div class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-lg sm:rounded-3xl">
-          <div class="border-b border-slate-100 bg-slate-50/90 px-5 py-5 sm:px-8">
-            <h2 class="font-serif text-xl font-semibold text-slate-900 sm:text-2xl">Apply for remote-friendly roles</h2>
-            <p class="mt-3 text-sm leading-relaxed text-slate-600">${esc(formSectionDescription)}</p>
-          </div>
-          <form class="space-y-4 px-5 py-6 sm:px-8 sm:py-8" action="/thank-you" method="get">
-            <div>
-              <label class="mb-1.5 block text-sm font-medium text-slate-700">Name</label>
-              <input type="text" name="name" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="Your full name" />
-            </div>
-            <div>
-              <label class="mb-1.5 block text-sm font-medium text-slate-700">Email Address</label>
-              <input type="email" name="email" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="you@email.com" />
-            </div>
-            <div>
-              <label class="mb-1.5 block text-sm font-medium text-slate-700">WhatsApp Number</label>
-              <div class="flex flex-col gap-2 sm:flex-row">
-                <select name="country_code" class="min-h-12 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base sm:w-28 sm:text-sm"><option>+65</option><option>+60</option><option>+62</option><option>+63</option></select>
-                <input type="tel" name="phone" class="min-h-12 w-full flex-1 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="Phone number" />
-              </div>
-            </div>
-            <div>
-              <label class="mb-1.5 block text-sm font-medium text-slate-700">Job Position Preferred</label>
-              <select name="position" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base sm:text-sm">${jobs}</select>
-            </div>
-            <label class="flex items-start gap-3 text-sm leading-relaxed text-slate-600">
-              <input type="checkbox" name="consent" class="mt-1 h-4 w-4 shrink-0 rounded border-slate-300" />
-              ${esc(consentText)}
-            </label>
-            <div class="rounded-xl border border-dashed border-slate-200 bg-slate-50 px-4 py-5 text-center text-xs text-slate-500">reCAPTCHA placeholder</div>
-            <button type="submit" class="btn-primary w-full min-h-12 text-base">Submit Application</button>
-          </form>
-        </div>
+    </div>
+  </section>
+
+  <section id="roles" class="bg-slate-50 py-16 sm:py-20 lg:py-28">
+    <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <header class="max-w-3xl lg:max-w-none"><h2 id="roles-heading" class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Current remote-friendly role categories</h2>
+      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">These role categories are currently accepting applications from Singapore-based applicants. Final role availability, pay, schedule, screening, and hiring decisions are confirmed by the relevant hiring company.</p></header>
+      <div class="mt-8 flex flex-col gap-4 rounded-2xl border border-brand-200/50 bg-brand-600 px-5 py-6 text-white sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p class="text-sm leading-relaxed text-brand-50 sm:text-base">Choose a role category that fits your background and submit your application online.</p>
+        <a href="#hero-form" class="btn-outline mt-4 shrink-0 border-white/40 bg-white text-brand-700 sm:mt-0">Apply Now</a>
       </div>
+      <div class="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:grid-cols-2">${rolesHtml}</div>
     </div>
   </section>
 
@@ -380,19 +344,10 @@ function buildIndex() {
         <img src="images/steps.png" alt="Singapore applicants reviewing remote work opportunities on laptops" class="absolute inset-0 h-full w-full object-cover" loading="lazy" />
       </div>
       <div class="mt-10 flex flex-col gap-2 sm:mt-12 lg:grid lg:grid-cols-3 lg:gap-6">${stepsHtml}</div>
-    </div>
-  </section>
-
-
-  <section id="roles" class="bg-slate-50 py-16 sm:py-20 lg:py-28">
-    <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-      <header class="max-w-3xl lg:max-w-none"><h2 id="roles-heading" class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Current remote-friendly role categories</h2>
-      <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">These role categories are currently accepting applications from Singapore-based applicants. Final role availability, pay, schedule, screening, and hiring decisions are confirmed by the relevant hiring company.</p></header>
-      <div class="mt-8 flex flex-col gap-4 rounded-2xl border border-brand-200/50 bg-brand-600 px-5 py-6 text-white sm:mt-10 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-        <p class="text-sm leading-relaxed text-brand-50 sm:text-base">Choose a role category that fits your background and submit your application online.</p>
-        <a href="#hero-form" class="btn-outline mt-4 shrink-0 border-white/40 bg-white text-brand-700 sm:mt-0">Apply Now</a>
+      <div class="mt-10 flex flex-col items-center gap-2 text-center sm:mt-12">
+        <p class="text-sm text-slate-500">Submit your application at any time when you are ready.</p>
+        <a href="#hero-form" class="text-sm font-medium text-brand-700 underline underline-offset-4 hover:text-brand-800">Apply Now</a>
       </div>
-      <div class="mt-8 flex flex-col gap-6 sm:mt-10">${rolesHtml}</div>
     </div>
   </section>
 
@@ -401,6 +356,44 @@ function buildIndex() {
       <header class="max-w-3xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl lg:text-4xl">Who can apply</h2>
       <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">Before applying, review these general points. Individual roles may have additional criteria set by hiring companies.</p></header>
       <div class="mt-10 overflow-hidden rounded-2xl border border-slate-200/80 bg-white sm:mt-12 sm:rounded-3xl">${eligibilityHtml}</div>
+    </div>
+  </section>
+
+  <section class="bg-white py-16 sm:py-20 lg:py-24" id="hero-form">
+    <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-lg sm:rounded-3xl">
+        <div class="border-b border-slate-100 bg-slate-50/90 px-5 py-5 sm:px-8">
+          <h2 class="font-serif text-xl font-semibold text-slate-900 sm:text-2xl">Apply for remote-friendly roles</h2>
+          <p class="mt-3 text-sm leading-relaxed text-slate-600">${esc(formSectionDescription)}</p>
+        </div>
+        <form class="space-y-4 px-5 py-6 sm:px-8 sm:py-8" action="thank-you.html" method="get">
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-slate-700">Name</label>
+            <input type="text" name="name" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="Your full name" />
+          </div>
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-slate-700">Email Address</label>
+            <input type="email" name="email" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="you@email.com" />
+          </div>
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-slate-700">WhatsApp Number</label>
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <select name="country_code" class="min-h-12 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-base sm:w-28 sm:text-sm"><option>+65</option><option>+60</option><option>+62</option><option>+63</option></select>
+              <input type="tel" name="phone" class="min-h-12 w-full flex-1 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base outline-none sm:text-sm" placeholder="Phone number" />
+            </div>
+          </div>
+          <div>
+            <label class="mb-1.5 block text-sm font-medium text-slate-700">Job Position Preferred</label>
+            <select name="position" class="w-full min-h-12 rounded-xl border border-slate-200 bg-white px-4 py-3 text-base sm:text-sm">${jobs}</select>
+          </div>
+          <label class="flex items-start gap-3 text-sm leading-relaxed text-slate-600">
+            <input type="checkbox" name="consent" class="mt-1 h-4 w-4 shrink-0 rounded border-slate-300" />
+            ${esc(consentText)}
+          </label>
+          <div class="rounded-xl border border-dashed border-slate-200 bg-slate-50 px-4 py-5 text-center text-xs text-slate-500">reCAPTCHA placeholder</div>
+          <button type="submit" class="btn-primary w-full min-h-12 text-base">Submit Application</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -443,7 +436,7 @@ function buildIndex() {
       <div class="flex flex-col gap-6 rounded-2xl border border-brand-200/40 bg-brand-50/50 px-5 py-8 sm:rounded-3xl sm:px-10 sm:py-10 lg:flex-row lg:items-center lg:justify-between">
         <div class="max-w-2xl"><h2 class="font-serif text-[1.75rem] font-semibold text-slate-900 sm:text-3xl">Questions before you apply?</h2>
         <p class="mt-4 text-base leading-relaxed text-slate-600">For general questions about how ${esc(brandName)} works, contact support for platform-related questions. Hiring decisions remain with third-party hiring companies.</p></div>
-        <p class="shrink-0 text-sm font-medium text-slate-800 lg:text-right">${esc(brandSupportEmail)}</p>
+        <a href="mailto:${esc(brandSupportEmail)}" class="btn-outline w-full shrink-0 sm:w-auto">Ask a Question</a>
       </div>
     </div>
   </section>
@@ -591,7 +584,7 @@ function buildThankYou() {
       <p class="mt-8 text-sm leading-relaxed text-slate-600">Questions about your submission? <span class="font-medium text-slate-800">${esc(brandSupportEmail)}</span></p>
       <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
         <a href="index.html" class="btn-primary w-full sm:w-auto">Back to Homepage</a>
-        <a href="index.html#roles" class="btn-outline w-full sm:w-auto">View Current Roles</a>
+        <a href="index.html#roles" class="btn-outline w-full sm:w-auto">View Role Categories</a>
       </div>
     </div>
   </div>
