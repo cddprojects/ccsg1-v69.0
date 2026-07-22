@@ -5,6 +5,7 @@ import { EligibilitySection } from "@/components/eligibility-section";
 import { GetStartedSection } from "@/components/get-started-section";
 import { HeroSection } from "@/components/hero-section";
 import { QuestionsSection } from "@/components/questions-section";
+import { RegistrationSection } from "@/components/registration-section";
 import { RolesSection } from "@/components/roles-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -16,10 +17,11 @@ export default function Home() {
       <SiteHeader />
       <main>
         <HeroSection />
+        <RolesSection />
         <AboutSection />
         <StepsSection />
-        <RolesSection />
         <EligibilitySection />
+        <RegistrationSection />
         <ConfidenceSection />
         <CompensationSection />
         <GetStartedSection />
