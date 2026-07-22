@@ -30,8 +30,8 @@ export function RolesSection() {
 
         <MotionStagger className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:grid-cols-2">
           {roleCards.map((role) => (
-            <MotionItem key={role.title}>
-              <article className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm sm:rounded-3xl">
+            <MotionItem key={role.title} className="h-full">
+              <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-sm sm:rounded-3xl">
                 <div className="flex min-w-0 flex-1 flex-col p-5 sm:p-6">
                   <div className="flex flex-wrap items-center gap-2">
                     {"activeBadge" in role && role.activeBadge && (
@@ -79,7 +79,7 @@ export function RolesSection() {
                       {role.supportingNote}
                     </p>
                   </div>
-                  <Button href="#hero-form" className="mt-4 w-full min-h-12 sm:mt-5">
+                  <Button href="#hero-form" className="mt-auto w-full min-h-12 pt-4 sm:pt-5">
                     Apply for this role
                   </Button>
                 </div>
