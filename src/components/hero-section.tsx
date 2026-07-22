@@ -29,7 +29,7 @@ export function HeroSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
               {brandTagline}
             </p>
-            <h1 className="mt-4 font-serif text-[1.875rem] font-semibold leading-normal text-slate-900 sm:text-4xl lg:text-[2.75rem]">
+            <h1 className="mt-4 font-serif text-[1.875rem] font-semibold leading-[36px] text-slate-900 sm:text-4xl sm:leading-[42px] lg:text-[2.75rem] lg:leading-[50px]">
               Apply for remote-friendly part-time roles in Singapore
             </h1>
             <p className="mt-5 text-base leading-relaxed text-slate-600">
