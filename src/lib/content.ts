@@ -155,32 +155,6 @@ export const eligibilityItems = [
 
 export const roleCards = [
   {
-    title: "Remote Admin Assistant",
-    profileFit: "Good fit",
-    tags: ["Basic computer", "Attention to detail", "Online admin"],
-    place: "Flexible arrangement",
-    hours: "Part-time",
-    pay: "Indicative S$16–S$22/hr",
-    description:
-      "Help with simple admin tasks such as updating records, organizing documents, checking details, and supporting daily online workflows.",
-    supportingNote:
-      "Good fit for applicants who are detail-oriented and comfortable using basic computer tools.",
-    image: "/images/roles/role-admin-data.png",
-  },
-  {
-    title: "Remote Customer Support Assistant",
-    profileFit: "Good fit",
-    tags: ["Customer replies", "Communication", "Online tools"],
-    place: "Flexible arrangement",
-    hours: "Part-time",
-    pay: "Indicative S$16–S$22/hr",
-    description:
-      "Support customer enquiries through chat, email, or calls while following company guidelines and response templates.",
-    supportingNote:
-      "Good fit for applicants who are patient, clear in communication, and comfortable helping customers online.",
-    image: "/images/roles/role-customer-support.png",
-  },
-  {
     title: "Remote E-commerce Store Operations Assistant",
     profileFit: "Good fit",
     activeBadge: "Active Opening",
@@ -207,6 +181,32 @@ export const roleCards = [
     supportingNote:
       "Good fit for applicants who are comfortable using online tools, reading carefully, and following clear instructions.",
     image: "/images/roles/role-ai-data.png",
+  },
+  {
+    title: "Remote Admin Assistant",
+    profileFit: "Good fit",
+    tags: ["Basic computer", "Attention to detail", "Online admin"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
+    description:
+      "Help with simple admin tasks such as updating records, organizing documents, checking details, and supporting daily online workflows.",
+    supportingNote:
+      "Good fit for applicants who are detail-oriented and comfortable using basic computer tools.",
+    image: "/images/roles/role-admin-data.png",
+  },
+  {
+    title: "Remote Customer Support Assistant",
+    profileFit: "Good fit",
+    tags: ["Customer replies", "Communication", "Online tools"],
+    place: "Flexible arrangement",
+    hours: "Part-time",
+    pay: "Indicative S$16–S$22/hr",
+    description:
+      "Support customer enquiries through chat, email, or calls while following company guidelines and response templates.",
+    supportingNote:
+      "Good fit for applicants who are patient, clear in communication, and comfortable helping customers online.",
+    image: "/images/roles/role-customer-support.png",
   },
   {
     title: "Online Merchant Support Assistant",
