@@ -2,6 +2,7 @@
 
 import { MotionSection } from "@/components/motion-section";
 import { brandSupportEmail } from "@/lib/brand";
+import { Button } from "@/components/ui/button";
 import { SectionShell } from "@/components/ui/section-shell";
 
 export function QuestionsSection() {
@@ -19,9 +20,13 @@ export function QuestionsSection() {
               hiring companies.
             </p>
           </div>
-          <p className="shrink-0 text-sm font-medium text-slate-800 lg:text-right">
-            {brandSupportEmail}
-          </p>
+          <Button
+            href={`mailto:${brandSupportEmail}`}
+            variant="outline"
+            className="w-full shrink-0 sm:w-auto"
+          >
+            Ask a Question
+          </Button>
         </div>
       </MotionSection>
     </SectionShell>

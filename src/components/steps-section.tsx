@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, ClipboardCheck, Send, type LucideIcon } from "lucide-react";
+import Link from "next/link";
 import { stepsCards, siteImages } from "@/lib/content";
 import { MotionItem, MotionSection, MotionStagger } from "@/components/motion-section";
 import { SectionHeading, SectionShell } from "@/components/ui/section-shell";
@@ -99,6 +100,18 @@ export function StepsSection() {
             })}
           </div>
         </MotionStagger>
+
+        <div className="mt-10 flex flex-col items-center gap-2 text-center sm:mt-12">
+          <p className="text-sm text-slate-500">
+            Submit your application at any time when you are ready.
+          </p>
+          <Link
+            href="#hero-form"
+            className="text-sm font-medium text-brand-700 underline underline-offset-4 hover:text-brand-800"
+          >
+            Apply Now
+          </Link>
+        </div>
       </MotionSection>
     </SectionShell>
   );
